@@ -1,0 +1,48 @@
+.carousel-item {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.carousel-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Oscurece la imagen de fondo */
+}
+
+.carousel-content {
+    position: absolute; /* Asegura que el contenido esté posicionado */
+    top: 50%; /* Ajusta esta propiedad según sea necesario */
+    left: 30%; /* Ajusta esta propiedad según sea necesario */
+    transform: translate(-50%, -50%); /* Centra el contenido */
+    padding: 20px;
+    text-align: justify;
+    background: none; /* Eliminar fondo */
+    color: white; /* Texto blanco */
+    max-width: 600px; /* Ajustar el ancho máximo según sea necesario */
+}
+
+.carousel-content h1 {
+    color: white; /* Título en blanco */
+    margin-bottom: 10px; /* Espacio entre el título y el párrafo */
+}
+
+/*-----------------------------------------*/
+
