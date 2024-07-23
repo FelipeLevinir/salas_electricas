@@ -31,7 +31,7 @@ export class LandingIngeapAgroComponent implements OnInit {
         //     image: 'assets/ingeap/4.png'
         // },
         {
-            name: 'Monitoreo de extraección de agua',
+            name: 'Monitoreo de extracción de agua',
             detalle:'Evita multas por la cantidad de agua extraída de tu pozo. (Decreto N°1238)',
             image: 'assets/ingeap/5.png'
         }
