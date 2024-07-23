@@ -1,17 +1,17 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
+# Ver http://help.github.com/ignore-files/ para más información sobre cómo ignorar archivos.
 
-# Compiled output
+# Salida compilada
 /dist
 /tmp
 /out-tsc
 /bazel-out
 
-# Node
+# Node.js
 /node_modules
 npm-debug.log
 yarn-error.log
 
-# IDEs and editors
+# IDEs y editores
 .idea/
 .project
 .classpath
@@ -25,8 +25,13 @@ yarn-error.log
 .vscode/*
 .history/*
 
-# Miscellaneous
+# Angular
 /.angular/cache
+.angular/
+.angular/cache
+.angular/cache/*
+
+# Archivos misceláneos
 .sass-cache/
 /connect.lock
 /coverage
@@ -34,7 +39,6 @@ yarn-error.log
 testem.log
 /typings
 
-# System files
+# Archivos del sistema
 .DS_Store
 Thumbs.db
-
