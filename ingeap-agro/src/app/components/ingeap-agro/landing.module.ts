@@ -10,6 +10,10 @@ import { ChartModule } from 'primeng/chart';
 import { PanelModule } from 'primeng/panel';
 import { ButtonModule } from 'primeng/button';
 import { CarouselModule } from 'primeng/carousel';
+import { ControlRiegoComponent } from './control-riego/control-riego.component';
+import { DiminucionCostosComponent } from './diminucion-costos/diminucion-costos.component';
+import { GestionRiegoComponent } from './gestion-riego/gestion-riego.component';
+import { MonitoreoExtraccionAguaComponent } from './monitoreo-extraccion-agua/monitoreo-extraccion-agua.component';
 
 @NgModule({
     imports: [
@@ -22,7 +26,11 @@ import { CarouselModule } from 'primeng/carousel';
         ButtonModule,
         CarouselModule,
         FaqIngeapAgroComponent,
-        ContactoIngeapAgroComponent
+        ContactoIngeapAgroComponent,
+        ControlRiegoComponent,
+        DiminucionCostosComponent,
+        GestionRiegoComponent,
+        MonitoreoExtraccionAguaComponent
     ],
     declarations: [LandingIngeapAgroComponent]
 })

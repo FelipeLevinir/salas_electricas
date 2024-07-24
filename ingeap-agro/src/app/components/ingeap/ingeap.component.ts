@@ -14,27 +14,27 @@ export class IngeapComponent implements OnInit{
     {
         name: 'Experiencia',
         detalle:'Más de 25 años de experiencia en proyectos de ingeniería y montaje eléctricos industriales.',
-        image: 'assets/ingeap/bg-image-1.jpg'
+        image: 'assets/ingeap/carrusel/1.jpeg'
     },
     {
         name: 'Solución integral',
         detalle:'Ofrecemos una solución integral desde la ingeniería y diseño hasta el montaje. Áreas de especialización: Contamos con ingenieros y profesionales de las área eléctrica,  electrónica, mecánica y de automatización.',
-        image: 'assets/ingeap/bg-image-2.jpg'
+        image: 'assets/ingeap/carrusel/2.JPG'
     },
     {
-        name: 'Automatización de riego',
-        detalle:'Moderniza tu campo, y obtiene una mejor gestión hídrica.',
-        image: 'assets/ingeap/bg-image-3.jpg'
+        name: 'Principales clientes',
+        detalle:'Trabajamos para importantes actores del país en el área industrial y de minería con faenas permanentes en la primera y segunda región de Chile',
+        image: 'assets/ingeap/carrusel/3.jpeg'
     },
     {
-      name: 'Automatización de riego',
-      detalle:'Moderniza tu campo, y obtiene una mejor gestión hídrica.',
-      image: 'assets/ingeap/bg-image-4.jpg'
+      name: 'Empresa en expansión',
+      detalle:'Nos encontramos continuamente adaptando a las nuevas tecnologías y a los cambios  en el mercado. Actualmente contamos con el dominio de “Salas eléctricas Chile” y nos expandimos al área agrícola con Ingeap Agro.',
+      image: 'assets/ingeap/carrusel/4.jpeg'
     },
     {
-        name: 'Monitoreo de extracción de agua',
-        detalle:'Evita multas por la cantidad de agua extraída de tu pozo. (Decreto N°1238)',
-        image: 'assets/ingeap/bg-image-5.jpg'
+        name: 'Integradores oficiales de Scheneider',
+        detalle:'Contamos con el apoyo de la fabrica para realizar proyectos de mayor envergadura.',
+        image: 'assets/ingeap/carrusel/5.jpeg'
     }
 ];
 
