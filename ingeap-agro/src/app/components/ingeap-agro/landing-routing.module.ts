@@ -6,11 +6,11 @@ import { ControlRiegoComponent } from './control-riego/control-riego.component';
 import { DiminucionCostosComponent } from './diminucion-costos/diminucion-costos.component';
 import { GestionRiegoComponent } from './gestion-riego/gestion-riego.component';
 import { MonitoreoExtraccionAguaComponent } from './monitoreo-extraccion-agua/monitoreo-extraccion-agua.component';
-
+import { FaqIngeapAgroComponent } from './faq-ingeap-agro/faq-ingeap-agro.component';
 @NgModule({
     imports: [RouterModule.forChild([
         { path: '', component: LandingIngeapAgroComponent },
-        { path: 'faq', component: LandingIngeapAgroComponent },
+        { path: 'faq', component: FaqIngeapAgroComponent },
         { path: 'contacto', component: ContactoIngeapAgroComponent },
         { path: 'control-riego', component: ControlRiegoComponent },
         { path: 'diminucion-costos', component: DiminucionCostosComponent },

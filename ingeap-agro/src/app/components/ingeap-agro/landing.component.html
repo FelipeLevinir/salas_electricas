@@ -20,7 +20,7 @@
 <div class="surface-0 flex justify-content-center">
     <div id="home" class="landing-wrapper overflow-hidden">
         <div class="py-4 px-4 mx-0 md:mx-6 lg:mx-8 lg:px-8 flex align-items-center justify-content-between relative lg:static mb-3">
-            <a class="flex align-items-center" href="#">
+            <a class="flex align-items-center" href="/ingeap-agro">
                 <img src="../../../../assets/ingeap/Quillota  Región de Valparaíso (4).png" alt="Sakai Logo" height="80" class="mr-0 lg:mr-2">
             </a>
             <a pRipple class="cursor-pointer block lg:hidden text-700" pStyleClass="@next" enterClass="hidden" leaveToClass="hidden" [hideOnOutsideClick]="true">
@@ -29,32 +29,32 @@
             <div class="align-items-center surface-0 flex-grow-1 justify-content-between hidden lg:flex absolute lg:static w-full left-0 px-6 lg:px-0 z-2" style="top:120px">
                 <ul class="list-none p-0 m-0 flex lg:align-items-center select-none flex-column lg:flex-row cursor-pointer">
                     <li>
-                        <a (click)="router.navigate(['/acerca'], {fragment: 'acerca'})" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
+                        <a (click)="navigateToFragment('acerca')" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
                            <span class="text-xl">Acerca de</span>
                         </a>
                     </li>
                     <li>
-                        <a (click)="router.navigate(['/servicios'], {fragment: 'servicios'})" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
+                        <a (click)="navigateToFragment('servicios')" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
                             <span class="text-xl">Servicios</span>
                         </a>
                     </li>
                     <li>
-                        <a (click)="router.navigate(['/beneficios'], {fragment: 'beneficios'})" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
+                        <a (click)="navigateToFragment('beneficios')" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
                             <span class="text-xl">Beneficios</span>
                         </a>
                     </li>
                     <li>
-                        <a (click)="router.navigate(['/planes'], {fragment: 'planes'})" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
+                        <a (click)="navigateToFragment('planes')" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
                             <span class="text-xl">Planes</span>
                         </a>
                     </li>
                     <li>
-                        <a (click)="router.navigate(['/landing'])" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
+                        <a (click)="router.navigate(['/ingeap-agro/faq'])" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
                             <span class="text-xl">FAQ.</span>
                         </a>
                     </li>
                     <li>
-                        <a (click)="router.navigate(['/contacto'])" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
+                        <a (click)="router.navigate(['/ingeap-agro/contacto'])" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
                             <span class="text-xl">Contacto</span>
                         </a>
                     </li>
@@ -140,19 +140,19 @@
             </div>
           
             <div class="image-section">
-              <div class="image-container" routerLink="/gestion-riego">
+              <div class="image-container" routerLink="/ingeap-agro/gestion-riego">
                 <img src="assets/ingeap/1.jpg" alt="Imagen 1">
                 <div class="info-overlay text-xl">Sistema de Gestión de Riego</div>
               </div>
-              <div class="image-container" routerLink="/diminucion-costos">
+              <div class="image-container" routerLink="/ingeap-agro/diminucion-costos">
                 <img src="assets/ingeap/2.jpg" alt="Imagen 2">
                 <div class="info-overlay text-xl">Sistema Fotovoltaico</div>
               </div>
-              <div class="image-container" routerLink="/monitoreo-extraccion-agua">
+              <div class="image-container" routerLink="/ingeap-agro/monitoreo-extraccion-agua">
                 <img src="assets/ingeap/5.png" alt="Imagen 3">
                 <div class="info-overlay text-xl">Cumplimiento Decreto #1238</div>
               </div>
-              <div class="image-container" routerLink="/control-riego">
+              <div class="image-container" routerLink="/ingeap-agro/control-riego">
                 <img src="assets/ingeap/3.jpg" alt="Imagen 4">
                 <div class="info-overlay text-xl">Automatización de Riego y Control Heladas</div>
               </div>

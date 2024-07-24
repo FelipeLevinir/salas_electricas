@@ -58,7 +58,7 @@ export class LandingIngeapAgroComponent implements OnInit {
         
     }
 
-    Navegar(){
-        alert('Navegar');
+    navigateToFragment(fragment: string) {
+        this.router.navigate(['/ingeap-agro'], { fragment });
     }
 }
