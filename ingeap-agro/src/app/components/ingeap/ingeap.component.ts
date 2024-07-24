@@ -61,12 +61,24 @@ responsiveOptions: any[] = [
 
   constructor(public layoutService: LayoutService, public router: Router) { }
 
-  ngOnInit(): void {
-    
-  }
+    ngOnInit(): void {
+        
+    }
 
-  navigateToFragment(fragment: string) {
-    this.router.navigate(['/ingeap'], { fragment });
-}
+    navigateToFragment(fragment: string) {
+        this.router.navigate(['/ingeap'], { fragment });
+    }
+
+    navegarIngeapAgro(){
+        this.router.navigate(['/ingeap-agro']);
+    }
+
+    navegarIngeap(){
+        this.router.navigate(['/ingeap']);
+    }
+
+    navegarSalas(){
+        this.router.navigate(['/salas']);
+    }
 
 }

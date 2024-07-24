@@ -149,7 +149,7 @@
     transform: translateX(-50%);
     background-color: white;
     z-index: 10; /* Asegura que esté sobre el carrusel */
-    pointer-events: none; /* Permite que los clics pasen a través del bloque rojo */
+    pointer-events: auto;
     border-radius: 10px;
     border: 2px solid blue;
 }

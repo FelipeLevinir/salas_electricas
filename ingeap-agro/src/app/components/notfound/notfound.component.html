@@ -1,3 +1,22 @@
-<div class="surface-ground flex align-items-center justify-content-center min-h-screen min-w-screen overflow-hidden">
-NOT FOUND!
+<div
+    class="h-screen"
+    style="background: linear-gradient(0deg, #006d6d 0%, #00acac 100%)"
+>
+    <div
+        class="bg-gray-100 flex align-items-center justify-content-center"
+        style="height: 30%"
+    >
+    </div>
+
+    <div class="flex align-items-center flex-column" style="height: 70%">
+        <div class="p-7 text-center">
+            <span class="block text-white text-5xl font-bold mb-4"
+                >Page Not Found</span
+            >
+            <span class="block text-white mb-6"
+                >The resource you are looking for does not exist.</span
+            >
+            <span class="text-white text-5xl" [routerLink]="['/']" style="cursor: pointer;">Volver</span>
+        </div>
+    </div>
 </div>
