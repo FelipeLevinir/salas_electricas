@@ -1,4 +1,4 @@
-<div class="flex col-12 p-2 bg-green-700">
+<div class="flex col-12 p-2" style="background-color: #000053;">
     <div class="col-3 text-white text-lg">
         <i class="pi pi-map-marker pr-2" style="font-size: 1rem; color:orange"></i>
         <strong>{{topBarData.direccion}}</strong>
@@ -20,41 +20,36 @@
 <div class="surface-0 flex justify-content-center">
     <div id="home" class="landing-wrapper overflow-hidden">
         <div class="py-4 px-4 mx-0 md:mx-6 lg:mx-8 lg:px-8 flex align-items-center justify-content-between relative lg:static mb-3">
-            <a class="flex align-items-center" href="/ingeap-agro">
-                <img src="../../../../assets/ingeap/Quillota  Región de Valparaíso (4).png" alt="Sakai Logo" height="80" class="mr-0 lg:mr-2">
+            <a class="flex align-items-center" href="/ingeap">
+                <img src="../../../../assets/ingeap/logo2023.jpg" alt="Sakai Logo" height="80" class="mr-0 lg:mr-2">
             </a>
-            <a pRipple class="cursor-pointer block lg:hidden text-700" pStyleClass="@next" enterClass="hidden" leaveToClass="hidden" >
+            <a pRipple class="cursor-pointer block lg:hidden text-700" pStyleClass="@next" enterClass="hidden" leaveToClass="hidden">
                 <i class="pi pi-bars text-4xl"></i>
             </a>
             <div class="align-items-center surface-0 flex-grow-1 justify-content-between hidden lg:flex absolute lg:static w-full left-0 px-6 lg:px-0 z-2" style="top:120px">
                 <ul class="list-none p-0 m-0 flex lg:align-items-center select-none flex-column lg:flex-row cursor-pointer">
                     <li>
-                        <a (click)="navigateToFragment('acerca')" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
-                           <span class="text-xl">Acerca de</span>
+                        <a (click)="router.navigate(['/acerca'], {fragment: 'acerca'})" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
+                           <span class="text-xl">Inicio</span>
                         </a>
                     </li>
                     <li>
-                        <a (click)="navigateToFragment('servicios')" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
-                            <span class="text-xl">Servicios</span>
+                        <a (click)="router.navigate(['/servicios'], {fragment: 'servicios'})" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
+                            <span class="text-xl">Nuestra Empresa</span>
                         </a>
                     </li>
                     <li>
-                        <a (click)="navigateToFragment('beneficios')" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
-                            <span class="text-xl">Beneficios</span>
+                        <a (click)="router.navigate(['/beneficios'], {fragment: 'beneficios'})" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
+                            <span class="text-xl">Lineas de Negocios</span>
                         </a>
                     </li>
                     <li>
-                        <a (click)="navigateToFragment('planes')" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
-                            <span class="text-xl">Planes</span>
+                        <a (click)="router.navigate(['/planes'], {fragment: 'planes'})" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
+                            <span class="text-xl">Clientes</span>
                         </a>
                     </li>
                     <li>
-                        <a (click)="router.navigate(['/ingeap-agro/faq'])" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
-                            <span class="text-xl">FAQ.</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a (click)="router.navigate(['/ingeap-agro/contacto'])" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
+                        <a (click)="router.navigate(['/contacto'])" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
                             <span class="text-xl">Contacto</span>
                         </a>
                     </li>

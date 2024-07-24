@@ -7,7 +7,7 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { ButtonModule } from 'primeng/button';
 
 @Component({
-  selector: 'app-faq-ingeap-agro',
+  selector: 'app-contacto',
   standalone: true,
   imports: [
     CommonModule,
@@ -15,16 +15,15 @@ import { ButtonModule } from 'primeng/button';
     InputTextareaModule,
     ButtonModule
   ],
-  templateUrl: './faq-ingeap-agro.component.html',
-  styleUrl: './faq-ingeap-agro.component.scss'
+  templateUrl: './contacto.component.html',
+  styleUrl: './contacto.component.scss'
 })
-export class FaqIngeapAgroComponent {
-
+export class ContactoComponent {
   constructor(public layoutService: LayoutService, public router: Router) {}
 
   topBarData = {direccion: "Ariztia 1050 Quillota", correo: "Info.agro@ingeap.cl", numeroContacto: "+569 7380 1447"};
     
   navigateToFragment(fragment: string) {
-    this.router.navigate(['/ingeap-agro'], { fragment });
+    this.router.navigate(['/ingeap'], { fragment });
   }
 }

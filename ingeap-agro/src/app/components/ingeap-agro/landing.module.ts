@@ -14,6 +14,8 @@ import { ControlRiegoComponent } from './control-riego/control-riego.component';
 import { DiminucionCostosComponent } from './diminucion-costos/diminucion-costos.component';
 import { GestionRiegoComponent } from './gestion-riego/gestion-riego.component';
 import { MonitoreoExtraccionAguaComponent } from './monitoreo-extraccion-agua/monitoreo-extraccion-agua.component';
+import { InputTextModule } from 'primeng/inputtext';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 
 @NgModule({
     imports: [
@@ -30,7 +32,9 @@ import { MonitoreoExtraccionAguaComponent } from './monitoreo-extraccion-agua/mo
         ControlRiegoComponent,
         DiminucionCostosComponent,
         GestionRiegoComponent,
-        MonitoreoExtraccionAguaComponent
+        MonitoreoExtraccionAguaComponent,
+        InputTextModule,
+        InputTextareaModule
     ],
     declarations: [LandingIngeapAgroComponent]
 })

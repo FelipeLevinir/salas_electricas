@@ -8,7 +8,9 @@ import { PanelModule } from 'primeng/panel';
 import { ButtonModule } from 'primeng/button';
 import { CarouselModule } from 'primeng/carousel';
 import { IngeapComponent } from './ingeap.component';
-
+import { InputTextModule } from 'primeng/inputtext';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { ContactoComponent } from './contacto/contacto.component';
 @NgModule({
     imports: [
         CommonModule,
@@ -19,6 +21,9 @@ import { IngeapComponent } from './ingeap.component';
         PanelModule,
         ButtonModule,
         CarouselModule,
+        InputTextModule,
+        InputTextareaModule,
+        ContactoComponent
     ],
     declarations: [IngeapComponent]
 })

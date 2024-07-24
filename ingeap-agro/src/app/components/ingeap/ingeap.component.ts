@@ -65,4 +65,8 @@ responsiveOptions: any[] = [
     
   }
 
+  navigateToFragment(fragment: string) {
+    this.router.navigate(['/ingeap'], { fragment });
+}
+
 }
