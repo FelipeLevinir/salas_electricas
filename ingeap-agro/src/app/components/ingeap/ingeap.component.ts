@@ -12,25 +12,25 @@ export class IngeapComponent implements OnInit{
 
   products = [
     {
-        name: 'Sistema de Gestion de Riego',
-        detalle:'Conoce el estado de tus suelos en tiempo real y optimiza el uso de agua en tu campo.',
+        name: 'Experiencia',
+        detalle:'Más de 25 años de experiencia en proyectos de ingeniería y montaje eléctricos industriales.',
         image: 'assets/ingeap/bg-image-1.jpg'
     },
-    // {
-    //     name: 'Paneles fotovoltaicos',
-    //     detalle:'Disminuye tus costos energéticos mediante el uso de energías renovables.',
-    //     image: 'assets/ingeap/bg-image-2.jpg'
-    // },
+    {
+        name: 'Solución integral',
+        detalle:'Ofrecemos una solución integral desde la ingeniería y diseño hasta el montaje. Áreas de especialización: Contamos con ingenieros y profesionales de las área eléctrica,  electrónica, mecánica y de automatización.',
+        image: 'assets/ingeap/bg-image-2.jpg'
+    },
     {
         name: 'Automatización de riego',
         detalle:'Moderniza tu campo, y obtiene una mejor gestión hídrica.',
         image: 'assets/ingeap/bg-image-3.jpg'
     },
-    // {
-    //   name: 'Automatización de riego',
-    //   detalle:'Moderniza tu campo, y obtiene una mejor gestión hídrica.',
-    //   image: 'assets/ingeap/bg-image-4.jpg'
-    // },
+    {
+      name: 'Automatización de riego',
+      detalle:'Moderniza tu campo, y obtiene una mejor gestión hídrica.',
+      image: 'assets/ingeap/bg-image-4.jpg'
+    },
     {
         name: 'Monitoreo de extracción de agua',
         detalle:'Evita multas por la cantidad de agua extraída de tu pozo. (Decreto N°1238)',

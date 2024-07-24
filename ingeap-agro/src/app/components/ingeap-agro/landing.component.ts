@@ -25,11 +25,6 @@ export class LandingIngeapAgroComponent implements OnInit {
             detalle:'Moderniza tu campo, y obtiene una mejor gestión hídrica.',
             image: 'assets/ingeap/3.jpg'
         },
-        // {
-        //     name: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ',
-        //     detalle:'',
-        //     image: 'assets/ingeap/4.png'
-        // },
         {
             name: 'Monitoreo de extracción de agua',
             detalle:'Evita multas por la cantidad de agua extraída de tu pozo. (Decreto N°1238)',
@@ -61,5 +56,9 @@ export class LandingIngeapAgroComponent implements OnInit {
 
     ngOnInit() {
         
+    }
+
+    Navegar(){
+        alert('Navegar');
     }
 }

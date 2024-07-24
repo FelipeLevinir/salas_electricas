@@ -1,6 +1,6 @@
 .carousel-item {
     width: 100%;
-    height: 700px;
+    height: 650px;
     position: relative;
     display: flex;
     align-items: center;
@@ -51,7 +51,7 @@
     align-items: center;
     right: 10px;
     top: 50%;
-    transform: translateY(-100%);
+    transform: translateY(-350%);
 }
 
 .custom-carousel {
@@ -139,3 +139,44 @@
     bottom: 0;
     right: 0;
 }
+
+.overlay-block {
+    position: absolute;
+    top: 82%;
+    left: 50%;
+    width: 50%;
+    height: 17%;
+    transform: translateX(-50%);
+    background-color: white;
+    z-index: 10; /* Asegura que esté sobre el carrusel */
+    pointer-events: none; /* Permite que los clics pasen a través del bloque rojo */
+    border-radius: 10px;
+    border: 2px solid blue;
+}
+
+.image-section {
+    display: flex;
+    justify-content: space-around;
+}
+  
+.image-container {
+    position: relative;
+    width: 23%;
+    margin: 1%;
+    overflow: hidden;
+    cursor: pointer;
+}
+  
+.image-container img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    display: block;
+    border-radius: 0.5rem;
+    transition: filter 0.3s ease;
+}
+  
+.image-container:hover img {
+    filter: brightness(50%); /* Oscurece la imagen al pasar el mouse */
+}
+  
