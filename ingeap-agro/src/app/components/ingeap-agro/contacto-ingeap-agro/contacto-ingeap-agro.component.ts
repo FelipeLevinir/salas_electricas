@@ -26,4 +26,8 @@ export class ContactoIngeapAgroComponent {
   navigateToFragment(fragment: string) {
     this.router.navigate(['/ingeap-agro'], { fragment });
   }
+
+  navegarIngeapAgro(){
+    this.router.navigate(['/ingeap-agro']);
+  }
 }

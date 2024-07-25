@@ -17,10 +17,10 @@
         <strong><i class="ml-2 mr-2 pi pi-linkedin text-2xl"></i></strong>
     </div>
 </div>
-<div class="surface-0 flex justify-content-center">
-    <div id="home" class="landing-wrapper overflow-hidden">
+<div class="surface-0 flex">
+    <div class="landing-wrapper overflow-hidden">
         <div class="py-4 px-4 mx-0 md:mx-6 lg:mx-8 lg:px-8 flex align-items-center justify-content-between relative lg:static mb-3">
-            <a class="flex align-items-center" href="/ingeap-agro">
+            <a class="flex align-items-center" (click)="navegarIngeapAgro()" style="cursor: pointer;">
                 <img src="../../../../assets/ingeap/Quillota  Región de Valparaíso (4).png" alt="Sakai Logo" height="80" class="mr-0 lg:mr-2">
             </a>
             <a pRipple class="cursor-pointer block lg:hidden text-700" pStyleClass="@next" enterClass="hidden" leaveToClass="hidden">
@@ -28,6 +28,11 @@
             </a>
             <div class="align-items-center surface-0 flex-grow-1 justify-content-between hidden lg:flex absolute lg:static w-full left-0 px-6 lg:px-0 z-2" style="top:120px">
                 <ul class="list-none p-0 m-0 flex lg:align-items-center select-none flex-column lg:flex-row cursor-pointer">
+                    <li>
+                        <a (click)="navigateToFragment('home')" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
+                            <span class="text-xl">Inicio</span>
+                        </a>
+                    </li>
                     <li>
                         <a (click)="navigateToFragment('acerca')" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
                             <span class="text-xl">Acerca de</span>
@@ -61,51 +66,51 @@
                 </ul>
             </div>
         </div>
-        <div class="surface-0 flex justify-content-center">
-            <div class="contact-form-wrapper overflow-hidden">
-                <div class="text-center">
-                    <h2 class="text-5xl font-normal mb-2">FAQ.</h2>
+    </div>
+</div>
+<div class="surface-0 flex justify-content-center">
+    <div class="contact-form-wrapper overflow-hidden">
+        <div class="text-center">
+            <h2 class="text-5xl font-normal mb-2">FAQ.</h2>
+        </div>
+        <div class="py-4 px-4 mx-0 md:mx-6 lg:mx-8 lg:px-8 flex align-items-center justify-content-between relative lg:static mb-3">
+            <div class="grid">
+                <div class="col-6">
+                    <form class="p-fluid">
+                        <div class="p-field">
+                            <label for="q1" class="text-lg"><b>1. ¿Cómo funciona el tensiómetro?</b></label>
+                            <br>
+                            <p>Este instrumento mide la tensión real del agua o potencial hídrico, lo que indica el esfuerzo requerido por las raíces para extraer agua del suelo. Esta característica es la principal diferencia con un sensor de humedad el cual solo ve el porcentaje de humedad presente en el suelo.</p>
+                            <br>
+                        </div>
+                        <div class="p-field">
+                            <label for="q2"><b>2.¿Cómo funciona la demo?</b></label>
+                            <br>
+                            <p>Ingeap Agro permite el uso del sistema S.G.R al cliente sin costo, durante un tiempo acordado, en el cual el usuario podrá evidenciar en su campo los beneficios que confiere el sistema a su cultivo.</p>
+                            <br>
+                        </div>
+                        <div class="p-field">
+                            <label for="q3"><b>3.¿Cuáles son los beneficios del S.G.R?</b></label>
+                            <br>
+                                <ul>
+                                    <li>Eficiencia en el uso de agua y energía.</li>
+                                    <li>Monitoreo remoto.</li>
+                                    <li>Aumenta la capacidad de análisis y mejora en la toma de decisiones.</li>
+                                    <li>Automatización de labores.</li>
+                                    <li>Alarmas.</li>
+                                </ul>
+                            <br>
+                        </div>
+                        <div class="p-field">
+                            <label for="q4"><b>4.¿Cómo determinan los sectores en donde instalar el S.G.R en el campo?</b></label>
+                            <br>
+                            <p>Con la finalidad de obtener datos más certeros y homogéneos, Ingeap Agro realiza un análisis satelital, en donde conoce el tipo de suelo. Esta información la contrasta con curvas de nivel y sectores de riego.</p>
+                            <br>
+                        </div>
+                    </form>
                 </div>
-                <div class="py-4 px-4 mx-0 md:mx-6 lg:mx-8 lg:px-8 flex align-items-center justify-content-between relative lg:static mb-3">
-                    <div class="grid">
-                        <div class="col-6">
-                            <form class="p-fluid">
-                                <div class="p-field">
-                                    <label for="q1" class="text-lg"><b>1. ¿Cómo funciona el tensiómetro?</b></label>
-                                    <br>
-                                    <p>Este instrumento mide la tensión real del agua o potencial hídrico, lo que indica el esfuerzo requerido por las raíces para extraer agua del suelo. Esta característica es la principal diferencia con un sensor de humedad el cual solo ve el porcentaje de humedad presente en el suelo.</p>
-                                    <br>
-                                </div>
-                                <div class="p-field">
-                                    <label for="q2"><b>2.¿Cómo funciona la demo?</b></label>
-                                    <br>
-                                    <p>Ingeap Agro permite el uso del sistema S.G.R al cliente sin costo, durante un tiempo acordado, en el cual el usuario podrá evidenciar en su campo los beneficios que confiere el sistema a su cultivo.</p>
-                                    <br>
-                                </div>
-                                <div class="p-field">
-                                    <label for="q3"><b>3.¿Cuáles son los beneficios del S.G.R?</b></label>
-                                    <br>
-                                        <ul>
-                                            <li>Eficiencia en el uso de agua y energía.</li>
-                                            <li>Monitoreo remoto.</li>
-                                            <li>Aumenta la capacidad de análisis y mejora en la toma de decisiones.</li>
-                                            <li>Automatización de labores.</li>
-                                            <li>Alarmas.</li>
-                                        </ul>
-                                    <br>
-                                </div>
-                                <div class="p-field">
-                                    <label for="q4"><b>4.¿Cómo determinan los sectores en donde instalar el S.G.R en el campo?</b></label>
-                                    <br>
-                                    <p>Con la finalidad de obtener datos más certeros y homogéneos, Ingeap Agro realiza un análisis satelital, en donde conoce el tipo de suelo. Esta información la contrasta con curvas de nivel y sectores de riego.</p>
-                                    <br>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="col-6 my-auto align-items-center text-center">
-                            <!-- Puedes añadir contenido adicional aquí -->
-                        </div>
-                    </div>
+                <div class="col-6 my-auto align-items-center text-center">
+                    <!-- Puedes añadir contenido adicional aquí -->
                 </div>
             </div>
         </div>

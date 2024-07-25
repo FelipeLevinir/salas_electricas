@@ -26,4 +26,8 @@ export class ContactoComponent {
   navigateToFragment(fragment: string) {
     this.router.navigate(['/ingeap'], { fragment });
   }
+
+  navegarIngeap(){
+      this.router.navigate(['/ingeap']);
+  }
 }
