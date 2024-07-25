@@ -36,7 +36,8 @@
     text-align: justify;
     background: none; /* Eliminar fondo */
     color: white; /* Texto blanco */
-    max-width: 600px; /* Ajustar el ancho máximo según sea necesario */
+    max-width: 800px; /* Ajustar el ancho máximo según sea necesario */
+    max-height: 500px;
 }
 
 .carousel-content h1 {
@@ -76,13 +77,13 @@
 }
 
 .top-left::before {
-    width: 20px;
+    width: 40px;
     height: 4px;
 }
 
 .top-left::after {
     width: 4px;
-    height: 20px;
+    height: 40px;
 }
 
 .top-right::before, .top-right::after {
@@ -91,14 +92,14 @@
 }
 
 .top-right::before {
-    width: 20px;
+    width: 40px;
     height: 4px;
     right: 0;
 }
 
 .top-right::after {
     width: 4px;
-    height: 20px;
+    height: 40px;
     top: 0;
     right: 0;
 }
@@ -109,14 +110,14 @@
 }
 
 .bottom-left::before {
-    width: 20px;
+    width: 40px;
     height: 4px;
     bottom: 0;
 }
 
 .bottom-left::after {
     width: 4px;
-    height: 20px;
+    height: 40px;
     bottom: 0;
     left: 0;
 }
@@ -127,7 +128,7 @@
 }
 
 .bottom-right::before {
-    width: 20px;
+    width: 40px;
     height: 4px;
     bottom: 0;
     right: 0;
@@ -135,7 +136,7 @@
 
 .bottom-right::after {
     width: 4px;
-    height: 20px;
+    height: 40px;
     bottom: 0;
     right: 0;
 }
@@ -183,7 +184,7 @@
         z-index: 10;
         pointer-events: auto;
         border-radius: 10px;
-        border: 2px solid green;
+        border: 2px solid blue;
     }
     .border-md-right {
         border-right: 2px solid blue;

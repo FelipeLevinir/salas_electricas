@@ -78,7 +78,7 @@ responsiveOptions: any[] = [
     }
 
     navegarSalas(){
-        this.router.navigate(['/salas']);
+        this.router.navigate(['/pagina-en-construccion']);
     }
 
 }
