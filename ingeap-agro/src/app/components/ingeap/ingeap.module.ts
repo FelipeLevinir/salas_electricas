@@ -11,6 +11,7 @@ import { IngeapComponent } from './ingeap.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { ContactoComponent } from './contacto/contacto.component';
+import { AccordionModule } from 'primeng/accordion';
 @NgModule({
     imports: [
         CommonModule,
@@ -23,7 +24,8 @@ import { ContactoComponent } from './contacto/contacto.component';
         CarouselModule,
         InputTextModule,
         InputTextareaModule,
-        ContactoComponent
+        ContactoComponent,
+        AccordionModule
     ],
     declarations: [IngeapComponent]
 })
