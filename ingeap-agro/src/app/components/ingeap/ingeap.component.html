@@ -76,32 +76,30 @@
             </ng-template>
         </p-carousel>
             
-        <div class="grid overlay-block">
-            <div class=" col-4 flex flex-column align-items-center justify-content-center text-xl" style="border-right: 2px solid blue;">
+        <div class="grid overlay-block mt-2 responsive-overlay-block">
+            <div class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl border-md-right">
                 <div class="flex align-items-center justify-content-center" style="width:6rem;height:6rem; border-radius:10px;">
                     <img src="assets/ingeap/iconos/14.png" (click)="navegarSalas()"
                     alt="Salas Eléctricas Chile" style="width: 100%; height: 100%; object-fit: contain; border-radius:10px; cursor: pointer;">
                 </div>
-                <span><a routerLink="/sala-electrica">Salas Eléctricas Chile</a></span>
+                <span>Salas Eléctricas Chile</span>
             </div>
-            <div class="col-4 flex flex-column align-items-center justify-content-center text-xl" style="border-right: 2px solid blue;">
+            <div class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl border-md-right">
                 <div class="flex align-items-center justify-content-center" style="width:6rem;height:6rem; border-radius:10px;">
-                    <img src="assets/ingeap/iconos/12.png" 
-                    alt="Ingeap SpA" (click)="navegarIngeap()"
-                    style="width: 100%; height: 100%; object-fit: contain; border-radius:10px; cursor: pointer;">
+                    <img src="assets/ingeap/iconos/12.png" (click)="navegarIngeap()"
+                    alt="Ingeap SpA" style="width: 100%; height: 100%; object-fit: contain; border-radius:10px; cursor: pointer;">
                 </div>
-                <span><a routerLink="/ingeap">Ingeap SpA</a></span>
+                <span><a style="cursor: pointer;">Ingeap SpA</a></span>
             </div>
-            <div class="col-4 flex flex-column align-items-center justify-content-center text-xl">
+            <div class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl">
                 <div class="flex align-items-center justify-content-center" style="width:6rem;height:6rem; border-radius:10px;">
-                    <img src="assets/ingeap/iconos/10.png" (click)="navegarIngeapAgro()"
+                    <img src="assets/ingeap/iconos/10.png" (click)="navegarIngeapAgro()" 
                     alt="Ingeap Agro" style="width: 100%; height: 100%; object-fit: contain; border-radius:10px; cursor: pointer;">
                 </div>
-                <span><a routerLink="/ingeap-agro">Ingeap Agro</a></span>
+                <span><a style="cursor: pointer;">Ingeap Agro</a></span>
             </div>
         </div>
         
-
         <div id="historia" class="py-4 px-4 my-6 bg-gray-100 " style="width: 100vw;">
             <!-- <div class="text-center">
                 <h2 class="text-5xl font-normal mb-2">Nuestra empresa</h2>

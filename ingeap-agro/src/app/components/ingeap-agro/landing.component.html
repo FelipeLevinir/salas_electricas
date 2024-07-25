@@ -1,17 +1,17 @@
-<div class="flex col-12 p-2 bg-green-700">
-    <div class="col-3 text-white text-lg">
+<div class="flex flex-wrap col-12 p-2 bg-green-700">
+    <div class="col-12 md:col-3 text-white text-lg hidden md:block">
         <i class="pi pi-map-marker pr-2" style="font-size: 1rem; color:orange"></i>
         <strong>{{topBarData.direccion}}</strong>
     </div>
-    <div class="col-3 text-white text-lg">
+    <div class="col-12 md:col-3 text-white text-lg hidden md:block">
         <i class="pi pi-envelope pr-2" style="font-size: 1rem; color:orange"></i>
         <strong>{{topBarData.correo}}</strong>
     </div>
-    <div class="col-3 text-white text-lg">
+    <div class="col-12 md:col-3 text-white text-lg hidden md:block">
         <i class="pi pi-phone pr-2" style="font-size: 1rem; color:orange"></i>
         <strong>{{topBarData.numeroContacto}}</strong>
     </div>
-    <div class="col-3 text-right text-white text-lg">
+    <div class="col-12 md:col-3 text-right text-white text-lg">
         <strong><i class="ml-2 mr-2 pi pi-facebook text-2xl"></i></strong>
         <strong><i class="ml-2 mr-2 pi pi-instagram text-2xl"></i></strong>
         <strong><i class="ml-2 mr-2 pi pi-linkedin text-2xl"></i></strong>
@@ -90,30 +90,29 @@
             </ng-template>
         </p-carousel>
         
-        <div class="grid overlay-block mt-2">
-            <div class="col-4 flex flex-column align-items-center justify-content-center text-xl" style="border-right: 2px solid green;">
+        <div class="grid overlay-block mt-2 responsive-overlay-block">
+            <div class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl border-md-right">
                 <div class="flex align-items-center justify-content-center" style="width:6rem;height:6rem; border-radius:10px;">
                     <img src="assets/ingeap/iconos/14.png" (click)="navegarSalas()"
                     alt="Salas Eléctricas Chile" style="width: 100%; height: 100%; object-fit: contain; border-radius:10px; cursor: pointer;">
                 </div>
                 <span>Salas Eléctricas Chile</span>
             </div>
-            <div class="col-4 flex flex-column align-items-center justify-content-center text-xl" style="border-right: 2px solid green;">
+            <div class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl border-md-right">
                 <div class="flex align-items-center justify-content-center" style="width:6rem;height:6rem; border-radius:10px;">
                     <img src="assets/ingeap/iconos/12.png" (click)="navegarIngeap()"
                     alt="Ingeap SpA" style="width: 100%; height: 100%; object-fit: contain; border-radius:10px; cursor: pointer;">
                 </div>
-                <span><a style="cursor: pointer;" routerLink="/">Ingeap SpA</a></span>
+                <span><a style="cursor: pointer;">Ingeap SpA</a></span>
             </div>
-            <div class="col-4 flex flex-column align-items-center justify-content-center text-xl">
+            <div class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl">
                 <div class="flex align-items-center justify-content-center" style="width:6rem;height:6rem; border-radius:10px;">
                     <img src="assets/ingeap/iconos/10.png" (click)="navegarIngeapAgro()" 
                     alt="Ingeap Agro" style="width: 100%; height: 100%; object-fit: contain; border-radius:10px; cursor: pointer;">
                 </div>
-                <span><a style="cursor: pointer;" routerLink="/ingeap-agro">Ingeap Agro</a></span>
+                <span><a style="cursor: pointer;">Ingeap Agro</a></span>
             </div>
         </div>
-        
             
         <div id="acerca" class="py-4 px-4 my-6 bg-gray-100 " style="width: 100vw;">
             <div class="text-center">
