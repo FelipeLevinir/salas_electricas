@@ -66,15 +66,15 @@ responsiveOptions: any[] = [
     }
 
     navigateToFragment(fragment: string) {
-        this.router.navigate(['/ingeap'], { fragment });
+        this.router.navigate(['/home'], { fragment });
     }
 
     navegarIngeapAgro(){
-        this.router.navigate(['/ingeap-agro']);
+        this.router.navigate(['/agro']);
     }
 
     navegarIngeap(){
-        this.router.navigate(['/ingeap']);
+        this.router.navigate(['/home']);
     }
 
     navegarSalas(){

@@ -10,6 +10,6 @@ export class EstamosTrabajandoComponent {
   constructor(private router: Router) { }
   
   navegarIngeap(){
-    this.router.navigate(['/ingeap']);
+    this.router.navigate(['/home']);
 }
 }

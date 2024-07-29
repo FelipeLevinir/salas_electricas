@@ -15,10 +15,10 @@ export class DiminucionCostosComponent {
   constructor(public layoutService: LayoutService, public router: Router){}
 
   navegarIngeapAgro(){
-    this.router.navigate(['/ingeap-agro']);
+    this.router.navigate(['/agro']);
   }
 
   navigateToFragment(fragment: string) {
-    this.router.navigate(['/ingeap-agro'], { fragment });
+    this.router.navigate(['/agro'], { fragment });
   }
 }

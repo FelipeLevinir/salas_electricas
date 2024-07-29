@@ -24,10 +24,10 @@ export class ContactoIngeapAgroComponent {
   topBarData = {direccion: "Ariztia 1050 Quillota", correo: "Info.agro@ingeap.cl", numeroContacto: "+569 7380 1447"};
     
   navigateToFragment(fragment: string) {
-    this.router.navigate(['/ingeap-agro'], { fragment });
+    this.router.navigate(['/agro'], { fragment });
   }
 
   navegarIngeapAgro(){
-    this.router.navigate(['/ingeap-agro']);
+    this.router.navigate(['/agro']);
   }
 }
