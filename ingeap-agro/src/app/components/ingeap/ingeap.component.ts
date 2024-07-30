@@ -32,7 +32,7 @@ export class IngeapComponent implements OnInit{
       image: 'assets/ingeap/carrusel/4.jpeg'
     },
     {
-        name: 'Integradores oficiales de Scheneider',
+        name: 'Integradores oficiales de Schneider Electric',
         detalle:'Contamos con el apoyo de la fabrica para realizar proyectos de mayor envergadura.',
         image: 'assets/ingeap/carrusel/5.jpeg'
     }
