@@ -1,4 +1,4 @@
-<div class="flex col-12 p-2" style="background-color: #000053;">
+<!-- <div class="flex col-12 p-2" style="background-color: #000053;">
     <div class="col-3 text-white text-lg">
         <i class="pi pi-map-marker pr-2" style="font-size: 1rem; color:orange"></i>
         <strong>{{topBarData.direccion}}</strong>
@@ -12,11 +12,11 @@
         <strong>{{topBarData.numeroContacto}}</strong>
     </div>
     <div class="col-3 text-right text-white text-lg">
-        <!-- <strong><i class="ml-2 mr-2 pi pi-facebook text-2xl"></i></strong>
+        <strong><i class="ml-2 mr-2 pi pi-facebook text-2xl"></i></strong>
         <strong><i class="ml-2 mr-2 pi pi-instagram text-2xl"></i></strong>
-        <strong><i class="ml-2 mr-2 pi pi-linkedin text-2xl"></i></strong> -->
+        <strong><i class="ml-2 mr-2 pi pi-linkedin text-2xl"></i></strong>
     </div>
-</div>
+</div> -->
 <div class="surface-0 flex">
     <div class="landing-wrapper overflow-hidden">
         <div class="py-4 px-4 mx-0 md:mx-6 lg:mx-8 lg:px-8 flex align-items-center justify-content-between relative lg:static mb-3">
@@ -29,28 +29,23 @@
             <div class="align-items-center surface-0 flex-grow-1 justify-content-between hidden lg:flex absolute lg:static w-full left-0 px-6 lg:px-0 z-2" style="top:120px">
                 <ul class="list-none p-0 m-0 flex lg:align-items-center select-none flex-column lg:flex-row cursor-pointer">
                     <li>
-                        <a (click)="navigateToFragment('home-ingeap')" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
-                           <span class="text-xl">Inicio</span>
-                        </a>
-                    </li>
-                    <li>
                         <a (click)="navigateToFragment('historia')" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
-                            <span class="text-xl">Nuestra Empresa</span>
+                            <span class="text-2xl">Nuestra Empresa</span>
                         </a>
                     </li>
                     <li>
                         <a (click)="navigateToFragment('negocios')" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
-                            <span class="text-xl">Lineas de Negocios</span>
+                            <span class="text-2xl">Lineas de Negocios</span>
                         </a>
                     </li>
                     <li>
                         <a (click)="navigateToFragment('clientes')" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
-                            <span class="text-xl">Clientes</span>
+                            <span class="text-2xl">Clientes</span>
                         </a>
                     </li>
                     <li>
                         <a (click)="router.navigate(['ingeap/contacto'])" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
-                            <span class="text-xl">Contacto</span>
+                            <span class="text-2xl">Contacto</span>
                         </a>
                     </li>
                 </ul>

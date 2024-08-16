@@ -1,4 +1,4 @@
-<div class="flex justify-content-center align-items-center col-12 p-2" style="background-color: #000053;">
+<!-- <div class="flex justify-content-center align-items-center col-12 p-2" style="background-color: #000053;">
     <div class="col-12 md:col-3  text-white text-lg flex justify-content-center align-items-center">
         <i class="pi pi-map-marker pr-2" style="font-size: 1rem; color:orange"></i>
         <strong>{{topBarData.direccion}}</strong>
@@ -12,14 +12,14 @@
         <strong>{{topBarData.numeroContacto}}</strong>
     </div>
     <div class="col-12 md:col-3  text-right text-white text-lg">
-        <!-- <strong><i class="ml-2 mr-2 pi pi-facebook text-2xl"></i></strong>
+        <strong><i class="ml-2 mr-2 pi pi-facebook text-2xl"></i></strong>
         <strong><i class="ml-2 mr-2 pi pi-instagram text-2xl"></i></strong>
-        <strong><i class="ml-2 mr-2 pi pi-linkedin text-2xl"></i></strong> -->
+        <strong><i class="ml-2 mr-2 pi pi-linkedin text-2xl"></i></strong>
     </div>
-</div>  
+</div>   -->
 <div class="surface-0 flex justify-content-center">
     <div id="home-ingeap" class="landing-wrapper overflow-hidden">
-        <div class="py-4 px-4 mx-0 md:mx-6 lg:mx-8 lg:px-8 flex align-items-center justify-content-between relative lg:static mb-3">
+        <div class="py-4 px-4 mx-0 md:mx-6 lg:mx-8 lg:px-8 flex align-items-center justify-content-between relative lg:static">
             <a class="flex align-items-center" (click)="navegarIngeap()">
                 <img src="../../../../assets/ingeap/logo2023.jpg" alt="Sakai Logo" height="80" class="mr-0 lg:mr-2">
             </a>
@@ -30,22 +30,22 @@
                 <ul class="list-none p-0 m-0 flex lg:align-items-center select-none flex-column lg:flex-row cursor-pointer">
                     <li>
                         <a (click)="navigateToFragment('historia')" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
-                            <span class="text-xl">Nuestra Empresa</span>
+                            <span class="text-2xl">Nuestra Empresa</span>
                         </a>
                     </li>
                     <li>
                         <a (click)="navigateToFragment('negocios')" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
-                            <span class="text-xl">Lineas de Negocios</span>
+                            <span class="text-2xl">Lineas de Negocios</span>
                         </a>
                     </li>
                     <li>
                         <a (click)="navigateToFragment('clientes')" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
-                            <span class="text-xl">Clientes</span>
+                            <span class="text-2xl">Clientes</span>
                         </a>
                     </li>
                     <li>
                         <a (click)="router.navigate(['home/contacto'])" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
-                            <span class="text-xl">Contacto</span>
+                            <span class="text-2xl">Contacto</span>
                         </a>
                     </li>
                 </ul>
@@ -76,7 +76,7 @@
             </ng-template>
         </p-carousel>
             
-        <div class="grid overlay-block mt-2 responsive-overlay-block">
+        <div class="grid overlay-block responsive-overlay-block">
             <div class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl border-md-right">
                 <div class="flex align-items-center justify-content-center" style="width:6rem;height:6rem; border-radius:10px;">
                     <img src="assets/ingeap/iconos/14.png" (click)="navegarSalas()"
@@ -89,7 +89,7 @@
                     <img src="assets/ingeap/iconos/12.png" (click)="navegarIngeap()"
                     alt="Ingeap SpA" style="width: 100%; height: 100%; object-fit: contain; border-radius:10px; cursor: pointer;">
                 </div>
-                <span><a style="cursor: pointer;">Ingeap SpA</a></span>
+                <span><a style="cursor: pointer;">Ingeap Servicios</a></span>
             </div>
             <div class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl">
                 <div class="flex align-items-center justify-content-center" style="width:6rem;height:6rem; border-radius:10px;">
@@ -100,11 +100,7 @@
             </div>
         </div>
         
-        <div id="historia" class="py-4 px-4 my-6 bg-gray-100 " style="width: 100vw;">
-            <!-- <div class="text-center">
-                <h2 class="text-5xl font-normal mb-2">Nuestra empresa</h2>
-            </div> -->
-    
+        <div id="historia" class="py-4 px-4 bg-gray-100 " style="width: 100vw;">    
             <div class="grid mt-8 pb-2 md:pb-8">
                 <div class="col-12 my-auto flex flex-column">
                     <div class="grid">
@@ -133,98 +129,99 @@
                             </div>   
                         </div>
                     </div>
+                    <div class="grid h-20rem" style="background-image: url(assets/ingeap/menu-ingeap/1.JPG);">
+                        <div class="col-1"></div>
+                        <div class="col-5 flex align-items-center justify-content-center">
+                            <div class="text-center">
+                                <span class="text-5xl block">
+                                    VISIÓN  
+                                </span>
+                                <span class="text-2xl block">Y</span>
+                                <span class="text-5xl block">
+                                    MISIÓN
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-5 flex align-items-center justify-content-center">
+                            <div class="text-justify">
+                                <span class="text-700 text-lg line-height-3 mx-auto m-5" style="color: #2e2e2e !important;">
+                                    Nuestro objetivo es ayudar a concretar proyectos y satisfacer necesidades de ingeniería eléctrica con costos competitivos,
+                                    manteniendo un compromiso inquebrantable con la seguridad y la calidad comparable a las mejores empresas del mercado. 
+                                    Buscamos ser reconocidos en el mercado como una empresa confiable, que aporta a nuestros clientes conocimientos y experiencia
+                                    en cada proyecto que emprendemos. Nos esforzamos por establecer relaciones de confianza y colaboración, garantizando resultados 
+                                    excepcionales y soluciones innovadoras que superen las expectativas de nuestros clientes. Así, consolidamos nuestra reputación
+                                    como líderes en el sector de ingeniería eléctrica.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
                     <div class="grid">
-                        <div class="col-6">
-                            <div class="col-12 image-section pt-4">
-                                <div class="image-container" routerLink="/ruta3">
-                                  <img src="assets/ingeap/menu-ingeap/3.jpeg" alt="Imagen 3">
-                                </div>
-                                <div class="image-container" routerLink="/ruta4">
-                                  <img src="assets/ingeap/menu-ingeap/4.JPG" alt="Imagen 4">
-                                </div>
-                                <div class="image-container" routerLink="/ruta4">
-                                    <img src="assets/ingeap/menu-ingeap/6.jpeg" alt="Imagen 6">
-                                </div>
-                            </div>   
-                        </div>
-                        <div class="col-6">
-                            <h2 class="line-height-1 text-900 text-4xl font-normal">NUESTROS VALORES</h2>
-                            <span class="text-700 text-lg line-height-3 mx-auto">
-                                En nuestra organización, la seguridad es nuestro primer valor, 
-                                guiando todas nuestras actividades para promover la salud, seguridad 
-                                y bienestar de nuestro personal. Actuamos con integridad, basándonos en 
-                                principios éticos sólidos y transparencia en todas nuestras interacciones. 
-                                Nos comprometemos a la excelencia en nuestro desempeño, buscando la 
-                                mejora continua e innovación. Además, asumimos responsabilidad con 
-                                nuestros colaboradores, proporcionando un entorno laboral seguro, 
-                                apoyando su desarrollo y fomentando una cultura de inclusión y respeto. 
-                                Estos pilares nos permiten construir una empresa sostenible y confiable.
-                            </span>
-                        </div>
+                        <div class="col-12 image-section pt-4">
+                            <div class="image-container" routerLink="/ruta1">
+                              <img src="assets/ingeap/menu-ingeap/1.JPG" alt="Imagen 1">
+                            </div>
+                            <div class="image-container" routerLink="/ruta2">
+                              <img src="assets/ingeap/menu-ingeap/2.jpeg" alt="Imagen 2">
+                            </div>
+                            <div class="image-container" routerLink="/ruta3">
+                              <img src="assets/ingeap/menu-ingeap/3.jpeg" alt="Imagen 3">
+                            </div>
+                            <div class="image-container" routerLink="/ruta4">
+                              <img src="assets/ingeap/menu-ingeap/4.JPG" alt="Imagen 4">
+                            </div>
+                            <div class="image-container" routerLink="/ruta3">
+                                <img src="assets/ingeap/menu-ingeap/5.jpeg" alt="Imagen 3">
+                              </div>
+                              <div class="image-container" routerLink="/ruta4">
+                                <img src="assets/ingeap/menu-ingeap/6.jpeg" alt="Imagen 4">
+                              </div>
+                              <div class="image-container" routerLink="/ruta4">
+                                <img src="assets/ingeap/menu-ingeap/7.jpeg" alt="Imagen 4">
+                              </div>
+                        </div>  
                     </div>
                     <div class="grid mt-5 pt-5">
                         <div class="col-3"></div>
                         <div class="col-6 text-center">
-                            <h2 class="line-height-1 text-900 text-4xl font-normal">NUESTRA MISIÓN Y VISIÓN</h2>
-                            <span class="text-700 text-lg line-height-3 mx-auto">
-                                Nuestro objetivo es ayudar a concretar proyectos y satisfacer necesidades de ingeniería eléctrica con costos competitivos, 
-                                manteniendo un compromiso inquebrantable con la seguridad y la calidad comparable a las mejores empresas del mercado. 
-                                Buscamos ser reconocidos en el mercado como una empresa confiable, que aporta a nuestros clientes conocimientos y experiencia 
-                                en cada proyecto que emprendemos. Nos esforzamos por establecer relaciones de confianza y colaboración, garantizando resultados 
-                                excepcionales y soluciones innovadoras que superen las expectativas de nuestros clientes.
-                                Así, consolidamos nuestra reputación como líderes en el sector de ingeniería eléctrica.
-                            </span>
-                        </div>
-                        <div class="col-3"></div>
-                    </div>
-                    <div class="grid mt-5 pt-5">
-                        <div class="col-3"></div>
-                        <div class="col-6 text-center">
-                            <h2 class="line-height-1 text-900 text-4xl font-normal">NUESTRO FUTURO</h2>
+                            <h2 class="line-height-1 text-900 text-4xl font-normal">EMPRESA EN EXPANSIÓN</h2>
                             <span class="text-700 text-lg line-height-3 mx-auto">
                                 En INGEAP, estamos comprometidos con el progreso tecnológico y la excelencia. 
                                 Una de nuestras labores relevante es mantenernos al tanto de las soluciones y 
-                                productos tecnológicos de vanguardia para ofrecer a nuestros clientes soluciones efectivas,
-                                seguras, y de costo competitivo.
-                                
-                                En respuesta a la creciente demanda de soluciones especializadas en el diseño, 
-                                construcción y montaje de equipos de control, protección, y gestión eléctrica hemos 
-                                decidido dar un paso estratégico en base a nuestra experiencia y el éxito sostenido que 
-                                se ha logrado con las salas eléctricas modulares, y por lo tanto,  utilizamos el dominio 
-                                "Salas Eléctricas Chile" para ofrecer de forma exclusiva, la ingeniería, construcción y 
-                                montaje de salas eléctricas modulares pre fabricadas. 
-                                Adicionalmente hemos expandido nuestras operaciones al sector agrícola con Ingeap Agro. 
-                                Incorporando profesionales del área (ingeniería agrónoma), en conjunto con nuestras otras 
-                                áreas de especialización buscamos entregar soluciones innovadoras e integrales a las 
-                                problemáticas del agricultor.
+                                productos tecnológicos de vanguardia para ofrecer a nuestros clientes soluciones efectivas, 
+                                seguras, y de costo competitivo. En respuesta a la creciente demanda de soluciones 
+                                especializadas en el diseño, construcción y montaje de equipos de control, protección, y 
+                                gestión eléctrica hemos decidido dar un paso estratégico en base a nuestra experiencia y 
+                                el éxito sostenido que se ha logrado con las salas eléctricas modulares, y por lo tanto, 
+                                utilizamos el dominio "Salas Eléctricas Chile" para ofrecer de forma exclusiva, la ingeniería, 
+                                construcción y montaje de salas eléctricas modulares pre fabricadas. Adicionalmente hemos expandido 
+                                nuestras operaciones al sector agrícola con Ingeap Agro. Incorporando profesionales del área (ingenería agrónoma),
+                                 en conjunto con nuestras otras áreas de especialización buscamos entregar soluciones innovadoras 
+                                 e integrales a las problemáticas del agricultor.
                             </span>
                         </div>
                         <div class="col-3"></div>
                     </div>
+                    <div class="grid">
+                        <div class="col-2"></div>
+                        <div class="col-8 image-section pt-4">
+                            <div class="image-container" routerLink="/ruta1">
+                              <img src="assets/ingeap/menu-ingeap/1.JPG" alt="Imagen 1">
+                              <div class="info-overlay text-xl">Salas Eléctricas Chile</div>
+                            </div>
+                            <div class="image-container" routerLink="/ruta2">
+                              <img src="assets/ingeap/menu-ingeap/2.jpeg" alt="Imagen 2">
+                              <div class="info-overlay text-xl">Ingeap Servicios</div>
+                            </div>
+                            <div class="image-container" routerLink="/ruta3">
+                              <img src="assets/ingeap/menu-ingeap/3.jpeg" alt="Imagen 3">
+                              <div class="info-overlay text-xl">Ingeap Agro</div>
+                            </div>
+                        </div>  
+                        <div class="col-2"></div>
+                    </div>
                 </div>  
-                <div class="col-12 image-section pt-4">
-                    <div class="image-container" routerLink="/ruta1">
-                      <img src="assets/ingeap/menu-ingeap/1.JPG" alt="Imagen 1">
-                    </div>
-                    <div class="image-container" routerLink="/ruta2">
-                      <img src="assets/ingeap/menu-ingeap/2.jpeg" alt="Imagen 2">
-                    </div>
-                    <div class="image-container" routerLink="/ruta3">
-                      <img src="assets/ingeap/menu-ingeap/3.jpeg" alt="Imagen 3">
-                    </div>
-                    <div class="image-container" routerLink="/ruta4">
-                      <img src="assets/ingeap/menu-ingeap/4.JPG" alt="Imagen 4">
-                    </div>
-                    <div class="image-container" routerLink="/ruta3">
-                        <img src="assets/ingeap/menu-ingeap/5.jpeg" alt="Imagen 3">
-                      </div>
-                      <div class="image-container" routerLink="/ruta4">
-                        <img src="assets/ingeap/menu-ingeap/6.jpeg" alt="Imagen 4">
-                      </div>
-                      <div class="image-container" routerLink="/ruta4">
-                        <img src="assets/ingeap/menu-ingeap/7.jpeg" alt="Imagen 4">
-                      </div>
-                </div>              
+            
             </div>
         </div>   
 

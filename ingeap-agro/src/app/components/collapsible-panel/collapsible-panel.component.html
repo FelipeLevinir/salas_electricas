@@ -1,15 +1,14 @@
 <div class="panel">
-    <div class="panel-header" >
-      <img [src]="imageUrl" alt="Panel Image" class="panel-image" (click)="togglePanel()">
-      <div class="panel-title">
-        <div class="text-xl">{{ title }}</div>
-      </div>
-    </div>
-    <div class="panel-body" [ngClass]="{'collapsed': !isCollapsed}">
-      <p>{{ description }}</p>
-      <ul>
-        <li *ngFor="let item of items">{{ item }}</li>
-      </ul>
+  <div class="panel-header">
+    <img [src]="imageUrl" alt="Panel Image" class="panel-image" (click)="togglePanel()">
+    <div class="panel-title">
+      <div class="text-xl">{{ title }}</div>
     </div>
   </div>
-  
+  <div class="panel-body" [ngClass]="{'collapsed': !isCollapsed}">
+    <p>{{ description }}</p>
+    <ul>
+      <li *ngFor="let item of items">{{ item }}</li>
+    </ul>
+  </div>
+</div>

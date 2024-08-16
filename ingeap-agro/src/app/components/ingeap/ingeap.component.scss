@@ -141,20 +141,6 @@
     right: 0;
 }
 
-// .overlay-block {
-//     position: absolute;
-//     top: 82%;
-//     left: 50%;
-//     width: 50%;
-//     height: 17%;
-//     transform: translateX(-50%);
-//     background-color: white;
-//     z-index: 10; /* Asegura que esté sobre el carrusel */
-//     pointer-events: auto;
-//     border-radius: 10px;
-//     border: 2px solid blue;
-// }
-
 @media (max-width: 768px) {
     .overlay-block {
         position: static;
@@ -175,8 +161,9 @@
 @media (min-width: 769px) {
     .overlay-block {
         position: absolute;
-        top: 80%;
+        top: 75%;
         left: 50%;
+        right: 50%;
         width: 50%;
         height: 17%;
         transform: translateX(-50%);
@@ -190,7 +177,6 @@
         border-right: 2px solid blue;
     }
 }
-
 
 .image-section {
     display: flex;
@@ -216,4 +202,16 @@
   
 .image-container:hover img {
     filter: brightness(50%); /* Oscurece la imagen al pasar el mouse */
+}
+
+.info-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: #3571c5;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
 }
