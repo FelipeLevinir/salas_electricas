@@ -1,7 +1,8 @@
 <app-header></app-header>
 <div class="surface-0 flex justify-content-center">
-    <div id="home" class="landing-wrapper overflow-hidden">
-        <p-carousel 
+    <div class="landing-wrapper overflow-hidden">
+        <div id="home">
+            <p-carousel 
             [value]="products" 
             [numVisible]="1" 
             [numScroll]="1" 
@@ -24,7 +25,7 @@
                 </div>
             </ng-template>
         </p-carousel>
-    
+        </div>
         <div class="grid overlay-block responsive-overlay-block">
             <div class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl border-md-right">
                 <div class="flex align-items-center justify-content-center" 
@@ -94,38 +95,38 @@
             <div class="image-section">
               <div class="image-container h-25rem" routerLink="/agro/gestion-riego">
                 <img src="assets/ingeap-agro/menu/2.jpg" class="h-25rem" alt="Imagen 1">
-                <div class="info-overlay text-xl">Sistema de Gestión de Riego</div>
+                <div class="info-overlay text-100 text-2xl">Sistema de Gestión de Riego</div>
               </div>
               <div class="image-container h-25rem" routerLink="/agro/diminucion-costos">
                 <img src="assets/ingeap-agro/menu/3.jpg" class="h-25rem" alt="Imagen 2">
-                <div class="info-overlay text-xl">Sistema Fotovoltaico</div>
+                <div class="info-overlay text-100 text-2xl">Sistema Fotovoltaico</div>
               </div>
               <div class="image-container h-25rem" routerLink="/agro/monitoreo-extraccion-agua">
                 <img src="assets/ingeap-agro/menu/7.png" class="h-25rem" alt="Imagen 3">
-                <div class="info-overlay text-xl">Cumplimiento Decreto #1238</div>
+                <div class="info-overlay text-100 text-2xl">Cumplimiento Decreto #1238</div>
               </div>
               <div class="image-container h-25rem" routerLink="/agro/control-riego">
                 <img src="assets/ingeap-agro/menu/4.jpg" class="h-25rem" alt="Imagen 4">
-                <div class="info-overlay text-xl">Automatización de Riego</div>
+                <div class="info-overlay text-100 text-2xl">Automatización de Riego</div>
               </div>
             </div>
 
             <div class="image-section">
                 <div class="image-container h-25rem" routerLink="/agro/gestion-riego">
                   <img src="assets/ingeap-agro/menu/5.png" class="h-25rem" alt="Imagen 1">
-                  <div class="info-overlay text-xl">Telemetría</div>
+                  <div class="info-overlay text-100 text-2xl">Telemetría</div>
                 </div>
                 <div class="image-container h-25rem" routerLink="/agro/diminucion-costos">
                   <img src="assets/ingeap-agro/menu/11.jpg" class="h-25rem" alt="Imagen 2">
-                  <div class="info-overlay text-xl">Automatización control de heladas</div>
+                  <div class="info-overlay text-100 text-2xl">Automatización control de heladas</div>
                 </div>
                 <div class="image-container h-25rem" routerLink="/agro/monitoreo-extraccion-agua">
                   <img src="assets/ingeap-agro/menu/9.png" class="h-25rem" alt="Imagen 3">
-                  <div class="info-overlay text-xl">Sensores Aranet</div>
+                  <div class="info-overlay text-100 text-2xl">Sensores Aranet</div>
                 </div>
                 <div class="image-container h-25rem" routerLink="/agro/control-riego">
                   <img src="assets/ingeap-agro/menu/10.png" class="h-25rem" alt="Imagen 4">
-                  <div class="info-overlay text-xl">Bombas de riego</div>
+                  <div class="info-overlay text-100 text-2xl">Bombas de riego</div>
                 </div>
               </div>
           </div>                  
