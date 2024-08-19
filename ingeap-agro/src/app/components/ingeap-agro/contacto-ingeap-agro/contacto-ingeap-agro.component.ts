@@ -5,6 +5,8 @@ import { LayoutService } from 'src/app/layout/service/app.layout.service';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { ButtonModule } from 'primeng/button';
+import { FooterComponent } from '../footer/footer.component';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-contacto-ingeap-agro',
@@ -13,7 +15,9 @@ import { ButtonModule } from 'primeng/button';
     CommonModule,
     InputTextModule,
     InputTextareaModule,
-    ButtonModule
+    ButtonModule,
+    FooterComponent,
+    HeaderComponent
   ],
   templateUrl: './contacto-ingeap-agro.component.html',
   styleUrls: ['./contacto-ingeap-agro.component.scss']

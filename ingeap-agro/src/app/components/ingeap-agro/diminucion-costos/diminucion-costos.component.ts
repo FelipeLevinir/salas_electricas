@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { LayoutService } from 'src/app/layout/service/app.layout.service';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-diminucion-costos',
   standalone: true,
-  imports: [],
+  imports: [HeaderComponent],
   templateUrl: './diminucion-costos.component.html',
   styleUrl: './diminucion-costos.component.scss'
 })

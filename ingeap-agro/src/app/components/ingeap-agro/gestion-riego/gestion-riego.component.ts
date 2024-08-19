@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { LayoutService } from 'src/app/layout/service/app.layout.service';
+import { HeaderComponent } from '../header/header.component';
 @Component({
   selector: 'app-gestion-riego',
   standalone: true,
-  imports: [],
+  imports: [HeaderComponent],
   templateUrl: './gestion-riego.component.html',
   styleUrl: './gestion-riego.component.scss'
 })

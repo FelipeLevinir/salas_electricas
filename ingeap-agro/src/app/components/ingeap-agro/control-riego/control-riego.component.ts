@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { LayoutService } from 'src/app/layout/service/app.layout.service';
+import { HeaderComponent } from '../header/header.component';
 @Component({
   selector: 'app-control-riego',
   standalone: true,
-  imports: [],
+  imports: [HeaderComponent],
   templateUrl: './control-riego.component.html',
   styleUrl: './control-riego.component.scss'
 })

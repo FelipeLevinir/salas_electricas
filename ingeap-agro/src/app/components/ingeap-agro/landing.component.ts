@@ -9,26 +9,44 @@ import { LayoutService } from 'src/app/layout/service/app.layout.service';
 })
 export class LandingIngeapAgroComponent implements OnInit {
 
+    imagenSrc1 = 'assets/iconos-menu/1.png';
+
+    cambiarImagen1(hover: boolean) {
+        this.imagenSrc1 = hover ? 'assets/iconos-menu/2.png' : 'assets/iconos-menu/1.png';
+    }
+
+    imagenSrc2 = 'assets/iconos-menu/3.png';
+
+    cambiarImagen2(hover: boolean) {
+        this.imagenSrc2 = hover ? 'assets/iconos-menu/4.png' : 'assets/iconos-menu/3.png';
+    }
+
+    imagenSrc3 = 'assets/iconos-menu/6.png';
+
+    cambiarImagen3(hover: boolean) {
+        this.imagenSrc3 = hover ? 'assets/iconos-menu/5.png' : 'assets/iconos-menu/6.png';
+    }
+
     products = [
         {
             name: 'Sistema de Gestion de Riego',
             detalle:'Conoce el estado de tus suelos en tiempo real y optimiza el uso de agua en tu campo.',
-            image: 'assets/ingeap/1.jpg'
+            image: 'assets/ingeap-agro/carrusel/1.jpg'
         },
         {
             name: 'Paneles fotovoltaicos',
             detalle:'Disminuye tus costos energéticos mediante el uso de energías renovables.',
-            image: 'assets/ingeap/2.jpg'
+            image: 'assets/ingeap-agro/carrusel/2.jpg'
         },
         {
             name: 'Automatización de riego',
             detalle:'Moderniza tu campo, y obtiene una mejor gestión hídrica.',
-            image: 'assets/ingeap/3.jpg'
+            image: 'assets/ingeap-agro/carrusel/3.jpg'
         },
         {
             name: 'Monitoreo de extracción de agua',
             detalle:'Evita multas por la cantidad de agua extraída de tu pozo. (Decreto N°1238)',
-            image: 'assets/ingeap/5.png'
+            image: 'assets/ingeap-agro/carrusel/5.png'
         }
     ];
 

@@ -171,10 +171,10 @@
         z-index: 10;
         pointer-events: auto;
         border-radius: 10px;
-        border: 2px solid blue;
+        border: 2px solid #3571c5;
     }
-    .border-md-right {
-        border-right: 2px solid blue;
+    .border-md-right:not(:last-child) {
+        border-right: 2px solid #3571c5;
     }
 }
 
@@ -214,4 +214,12 @@
     text-align: center;
     width: 100%;
     padding: 10px 0;
+}
+
+.menu-bk {
+    background-image: url('/assets/ingeap/menu-ingeap/experiencia.jpeg');
+    background-color: rgba(255, 255, 255, 0.8);     
+    background-blend-mode: overlay; /* Combina el color y la imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el área */
+    background-position: center; /* Centra la imagen */
 }
