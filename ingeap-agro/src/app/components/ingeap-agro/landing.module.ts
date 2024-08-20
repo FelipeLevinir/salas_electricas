@@ -13,6 +13,10 @@ import { InputTextModule } from 'primeng/inputtext';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { MenuServicio1Component } from './menu-servicio-1/menu-servicio-1.component';
+import { MenuServicio2Component } from './menu-servicio-2/menu-servicio-2.component';
+import { MenuServicio3Component } from './menu-servicio-3/menu-servicio-3.component';
+import { MenuServicio4Component } from './menu-servicio-4/menu-servicio-4.component';
 
 @NgModule({
     imports: [
@@ -28,7 +32,11 @@ import { HeaderComponent } from './header/header.component';
         InputTextModule,
         InputTextareaModule,
         FooterComponent,
-        HeaderComponent
+        HeaderComponent,
+        MenuServicio1Component,
+        MenuServicio2Component,
+        MenuServicio3Component,
+        MenuServicio4Component
     ],
     declarations: [LandingIngeapAgroComponent]
 })

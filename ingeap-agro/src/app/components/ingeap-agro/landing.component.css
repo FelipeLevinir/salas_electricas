@@ -60,81 +60,22 @@
     position: relative;
 }
 
-@media (max-width: 768px) {
-    .overlay-block {
-        position: static;
-        width: 100%;
-        height: auto;
-        margin-top: 1rem;
-        border-radius: 0;
-        border: none;
-    }
-    .responsive-overlay-block {
-        margin-top: 1rem;
-    }
-    .border-md-right {
-        border-right: none !important;
-    }
+.overlay-block {
+    position: relative;
+    top: -100px;
+    left: 50%;
+    right: 50%;
+    width: 50%;
+    height: 20%;
+    transform: translateX(-50%);
+    background-color: white;
+    z-index: 10;
+    pointer-events: auto;
+    border-radius: 10px;
+    border: 2px solid green;
 }
-
-@media (min-width: 769px) and (max-width: 1079px) {
-    .overlay-block {
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        right: 50%;
-        width: 80%;
-        height: 15%;
-        transform: translateX(-50%);
-        background-color: white;
-        z-index: 10;
-        pointer-events: auto;
-        border-radius: 10px;
-        border: 2px solid green;
-    }
-    .border-md-right:not(:last-child) {
-        border-right: 2px solid green;
-    }
-}
-
-@media (min-width: 1080px) and (max-width: 1439px) {
-    .overlay-block {
-        position: absolute;
-        top: 65%;
-        left: 50%;
-        right: 50%;
-        width: 50%;
-        height: 17%;
-        transform: translateX(-50%);
-        background-color: white;
-        z-index: 10;
-        pointer-events: auto;
-        border-radius: 10px;
-        border: 2px solid green;
-    }
-    .border-md-right:not(:last-child) {
-        border-right: 2px solid green;
-    }
-}
-
-@media (min-width: 1439px) {
-    .overlay-block {
-        position: absolute;
-        top: 72%;
-        left: 50%;
-        right: 50%;
-        width: 50%;
-        height: 17%;
-        transform: translateX(-50%);
-        background-color: white;
-        z-index: 10;
-        pointer-events: auto;
-        border-radius: 10px;
-        border: 2px solid green;
-    }
-    .border-md-right:not(:last-child) {
-        border-right: 2px solid green;
-    }
+.border-md-right:not(:last-child) {
+    border-right: 2px solid green;
 }
 
 .corner1 {

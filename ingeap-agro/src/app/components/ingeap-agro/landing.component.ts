@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { LayoutService } from 'src/app/layout/service/app.layout.service';
 
@@ -8,6 +8,18 @@ import { LayoutService } from 'src/app/layout/service/app.layout.service';
     styleUrls: ['./landing.component.css']
 })
 export class LandingIngeapAgroComponent implements OnInit {
+
+    @ViewChild('parentDiv') parentDiv!: ElementRef;
+
+    ngAfterViewInit() {
+      this.adjustHeight();
+    }
+  
+    adjustHeight() {
+        const childHeight = this.parentDiv.nativeElement.scrollHeight;
+        const offset = 100;
+        this.parentDiv.nativeElement.style.height = `${childHeight - offset}px`;
+    }
 
     imagenSrc1 = 'assets/iconos-menu/1.png';
 

@@ -14,6 +14,7 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { AccordionModule } from 'primeng/accordion';
 import { CollapsiblePanelComponent } from '../collapsible-panel/collapsible-panel.component';
 import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 @NgModule({
     imports: [
         CommonModule,
@@ -28,7 +29,8 @@ import { FooterComponent } from './footer/footer.component';
         InputTextareaModule,
         ContactoComponent,
         AccordionModule,
-        FooterComponent
+        FooterComponent,
+        HeaderComponent
     ],
     declarations: [IngeapComponent, CollapsiblePanelComponent]
 })

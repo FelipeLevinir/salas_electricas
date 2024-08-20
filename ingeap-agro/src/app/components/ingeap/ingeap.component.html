@@ -1,127 +1,78 @@
-<!-- <div class="flex justify-content-center align-items-center col-12 p-2" style="background-color: #000053;">
-    <div class="col-12 md:col-3  text-white text-lg flex justify-content-center align-items-center">
-        <i class="pi pi-map-marker pr-2" style="font-size: 1rem; color:orange"></i>
-        <strong>{{topBarData.direccion}}</strong>
-    </div>
-    <div class="col-12 md:col-3 text-white text-lg flex justify-content-center align-items-center">
-        <i class="pi pi-envelope pr-2" style="font-size: 1rem; color:orange"></i>
-        <strong>{{topBarData.correo}}</strong>
-    </div>
-    <div class="col-12 md:col-3 text-white text-lg flex justify-content-center align-items-center">
-        <i class="pi pi-phone pr-2" style="font-size: 1rem; color:orange"></i>
-        <strong>{{topBarData.numeroContacto}}</strong>
-    </div>
-    <div class="col-12 md:col-3  text-right text-white text-lg">
-        <strong><i class="ml-2 mr-2 pi pi-facebook text-2xl"></i></strong>
-        <strong><i class="ml-2 mr-2 pi pi-instagram text-2xl"></i></strong>
-        <strong><i class="ml-2 mr-2 pi pi-linkedin text-2xl"></i></strong>
-    </div>
-</div>   -->
+<app-header></app-header>
 <div class="surface-0 flex justify-content-center">
     <div id="home-ingeap" class="landing-wrapper overflow-hidden">
-        <div class="py-4 px-4 mx-0 md:mx-6 lg:mx-8 lg:px-8 flex align-items-center justify-content-between relative lg:static">
-            <a class="flex align-items-center" (click)="navegarIngeap()">
-                <img src="../../../../assets/ingeap/logo2023.jpg" alt="Sakai Logo" height="80" class="mr-0 lg:mr-2">
-            </a>
-            <a pRipple class="cursor-pointer block lg:hidden text-700" pStyleClass="@next" enterClass="hidden" leaveToClass="hidden" [hideOnOutsideClick]="true">
-                <i class="pi pi-bars text-4xl"></i>
-            </a>
-            <div class="align-items-center surface-0 flex-grow-1 justify-content-between hidden lg:flex absolute lg:static w-full left-0 px-6 lg:px-0 z-2" style="top:120px">
-                <ul class="list-none p-0 m-0 flex lg:align-items-center select-none flex-column lg:flex-row cursor-pointer">
-                    <li>
-                        <a (click)="navigateToFragment('historia')" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
-                            <span class="text-2xl">Nuestra Empresa</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a (click)="navigateToFragment('negocios')" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
-                            <span class="text-2xl">Lineas de Negocios</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a (click)="navigateToFragment('clientes')" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
-                            <span class="text-2xl">Clientes</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a (click)="router.navigate(['home/contacto'])" pRipple class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
-                            <span class="text-2xl">Contacto</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        
-        <p-carousel 
-            [value]="products" 
-            [numVisible]="1" 
-            [numScroll]="1" 
-            [circular]="true" 
-            [responsiveOptions]="responsiveOptions" 
-            autoplayInterval="4000"
-            class="custom-carousel">
-            <ng-template let-product pTemplate="item">
-                <div class="carousel-item flex align-items-center justify-content-center">
-                    <div class="carousel-background" [ngStyle]="{'background-image': 'url(' + product.image + ')'}"></div>
-                    <div class="carousel-overlay"></div>
-                    <div class="carousel-content">
-                        <div class="corner top-left"></div>
-                        <div class="corner top-right"></div>
-                        <div class="corner bottom-left"></div>
-                        <div class="corner bottom-right"></div>
-                        <h1 class="text-7xl text-white text-center">{{product.name}}</h1>
-                        <p class="text-4xl text-white text-center">{{product.detalle}}</p>
+        <div #parentDiv>
+            <p-carousel 
+                [value]="products" 
+                [numVisible]="1" 
+                [numScroll]="1" 
+                [circular]="true" 
+                [responsiveOptions]="responsiveOptions" 
+                autoplayInterval="4000"
+                class="custom-carousel">
+                <ng-template let-product pTemplate="item">
+                    <div class="carousel-item flex align-items-center justify-content-center">
+                        <div class="carousel-background" [ngStyle]="{'background-image': 'url(' + product.image + ')'}"></div>
+                        <div class="carousel-overlay"></div>
+                        <div class="carousel-content">
+                            <div class="corner top-left"></div>
+                            <div class="corner top-right"></div>
+                            <div class="corner bottom-left"></div>
+                            <div class="corner bottom-right"></div>
+                            <h1 class="text-7xl text-white text-center">{{product.name}}</h1>
+                            <p class="text-4xl text-white text-center">{{product.detalle}}</p>
+                        </div>
                     </div>
+                </ng-template>
+            </p-carousel>
+                
+            <div class="grid overlay-block">
+                <div class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl border-md-right">
+                    <div class="flex align-items-center justify-content-center" 
+                        style="width:6rem;height:6rem; border-radius:10px;">
+                        <img [src]="imagenSrc1"
+                            (mouseover)="cambiarImagen1(true)"
+                            (mouseout)="cambiarImagen1(false)"
+                            (click)="navegarSalas()"
+                            alt="Salas Eléctricas Chile" 
+                            style="width: 100%; height: 100%; object-fit: contain; border-radius:10px; cursor: pointer;">
+                    </div>
+                    <span>Salas Eléctricas Chile</span>
                 </div>
-            </ng-template>
-        </p-carousel>
-            
-        <div class="grid overlay-block responsive-overlay-block">
-            <div class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl border-md-right">
-                <div class="flex align-items-center justify-content-center" 
-                     style="width:6rem;height:6rem; border-radius:10px;">
-                    <img [src]="imagenSrc1"
-                         (mouseover)="cambiarImagen1(true)"
-                         (mouseout)="cambiarImagen1(false)"
-                         (click)="navegarSalas()"
-                         alt="Salas Eléctricas Chile" 
-                         style="width: 100%; height: 100%; object-fit: contain; border-radius:10px; cursor: pointer;">
-                </div>
-                <span>Salas Eléctricas Chile</span>
+                <div class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl border-md-right">
+                    <div class="flex align-items-center justify-content-center" 
+                        style="width:6rem;height:6rem; border-radius:10px;">
+                        <img [src]="imagenSrc2"
+                            (mouseover)="cambiarImagen2(true)"
+                            (mouseout)="cambiarImagen2(false)"
+                            (click)="navegarIngeap()"
+                            alt="Ingeap Servicios" 
+                            style="width: 100%; height: 100%; object-fit: contain; border-radius:10px; cursor: pointer;">
+                    </div>
+                    <span>Ingeap Servicios</span>
+                </div>   
+                <div class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl border-md-right">
+                    <div class="flex align-items-center justify-content-center" 
+                        style="width:6rem;height:6rem; border-radius:10px;">
+                        <img [src]="imagenSrc3"
+                            (mouseover)="cambiarImagen3(true)"
+                            (mouseout)="cambiarImagen3(false)"
+                            (click)="navegarIngeapAgro()"
+                            alt="Ingeap Agro" 
+                            style="width: 100%; height: 100%; object-fit: contain; border-radius:10px; cursor: pointer;">
+                    </div>
+                    <span>Ingeap Agro</span>
+                </div>               
             </div>
-            <div class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl border-md-right">
-                <div class="flex align-items-center justify-content-center" 
-                     style="width:6rem;height:6rem; border-radius:10px;">
-                    <img [src]="imagenSrc2"
-                         (mouseover)="cambiarImagen2(true)"
-                         (mouseout)="cambiarImagen2(false)"
-                         (click)="navegarIngeap()"
-                         alt="Ingeap Servicios" 
-                         style="width: 100%; height: 100%; object-fit: contain; border-radius:10px; cursor: pointer;">
-                </div>
-                <span>Ingeap Servicios</span>
-            </div>   
-            <div class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl border-md-right">
-                <div class="flex align-items-center justify-content-center" 
-                     style="width:6rem;height:6rem; border-radius:10px;">
-                    <img [src]="imagenSrc3"
-                         (mouseover)="cambiarImagen3(true)"
-                         (mouseout)="cambiarImagen3(false)"
-                         (click)="navegarIngeapAgro()"
-                         alt="Ingeap Agro" 
-                         style="width: 100%; height: 100%; object-fit: contain; border-radius:10px; cursor: pointer;">
-                </div>
-                <span>Ingeap Agro</span>
-            </div>               
-        </div>
-        
+        </div>        
+
         <div id="historia" class="py-4 px-4 bg-gray-100 " style="width: 100vw;">    
             <div class="grid mt-8 pb-2 md:pb-8">
                 <div class="col-12 my-auto flex flex-column">
                     <div class="grid">
                         <div class="col-6">
                             <h2 class="line-height-1 text-900 text-4xl font-normal text-left">NUESTRA HISTORIA</h2>
-                            <span class="text-xl line-height-3 mx-auto text-left">
+                            <span class="text-xl line-height-3 mx-auto text-left pb-2">
                                 Contamos con más de 25 años de trayectoria en proyectos de ingeniería y montaje eléctricos industriales.
                                 Nuestra oferta abarca una solución integral que se extiende desde el diseño inicial hasta la ejecución final del montaje, 
                                 especializándonos en áreas críticas como la ingeniería eléctrica, electrónica, mecánica y de automatización, 
@@ -148,11 +99,11 @@
                         <div class="col-1"></div>
                         <div class="col-5 flex align-items-center justify-content-center">
                             <div class="text-center">
-                                <span class="text-5xl block">
+                                <span class="text-7xl block">
                                     VISIÓN  
                                 </span>
-                                <span class="text-2xl block">Y</span>
-                                <span class="text-5xl block">
+                                <span class="text-5xl block">Y</span>
+                                <span class="text-7xl block">
                                     MISIÓN
                                 </span>
                             </div>
