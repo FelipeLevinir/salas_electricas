@@ -1,0 +1,37 @@
+.image-section {
+    display: flex;
+    justify-content: space-around;
+}
+  
+.image-container {
+    position: relative;
+    width: 23%;
+    margin: 1%;
+    overflow: hidden;
+    cursor: pointer;
+}
+  
+.image-container img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    display: block;
+    border-radius: 0.5rem;
+    transition: filter 0.3s ease;
+}
+  
+.image-container:hover img {
+    filter: brightness(50%); /* Oscurece la imagen al pasar el mouse */
+}
+
+.info-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: #3571c5;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+}

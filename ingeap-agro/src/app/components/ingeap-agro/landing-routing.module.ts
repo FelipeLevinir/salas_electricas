@@ -6,6 +6,7 @@ import { MenuServicio1Component } from './menu-servicio-1/menu-servicio-1.compon
 import { MenuServicio2Component } from './menu-servicio-2/menu-servicio-2.component';
 import { MenuServicio3Component } from './menu-servicio-3/menu-servicio-3.component';
 import { MenuServicio4Component } from './menu-servicio-4/menu-servicio-4.component';
+import { MenuServicio5Component } from './menu-servicio-5/menu-servicio-5.component';
 
 @NgModule({
     imports: [RouterModule.forChild([
@@ -14,7 +15,8 @@ import { MenuServicio4Component } from './menu-servicio-4/menu-servicio-4.compon
         { path: 'gestion-riego', component: MenuServicio1Component },
         { path: 'paneles-fotovoltaicos', component: MenuServicio2Component },
         { path: 'monitoreo-extraccion-agua', component: MenuServicio3Component },
-        { path: 'aranet', component: MenuServicio4Component }
+        { path: 'monitoreo-riego', component: MenuServicio4Component },
+        { path: 'aranet', component: MenuServicio5Component }
     ])],
     exports: [RouterModule]
 })
