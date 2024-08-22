@@ -23,4 +23,8 @@ export class FooterComponent {
   NavegarLinkedin(){
     window.open('https://www.linkedin.com/company/ingeap-agro/', '_blank');
   }
+
+  NavegarWhatsapp(){
+    window.open('https://wa.me/56923887974', '_blank');
+  }
 }
