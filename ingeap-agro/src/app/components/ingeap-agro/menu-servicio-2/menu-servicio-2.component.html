@@ -1,32 +1,27 @@
 <app-header></app-header>
 <div class="surface-0 flex justify-content-center">
     <div id="home-ingeap" class="landing-wrapper overflow-hidden">
-        <div id="" class="px-4">    
-            <div class="grid">
+        <div>
+            <div class="grid menu">
                 <div class="col-12 my-auto flex flex-column">
                     <div class="grid">
-                        <div class="col-6">
-                            <div class="text-center m-5">
-                                <img src="assets/ingeap-agro/menu/3.jpg" class="h-25rem" alt="Imagen 2" style="border-radius: 2px;">              
-                            </div>
-                        </div>
+                        <div class="col-3"></div>
                         <div class="col-6">
                             <div class="grid image-section pt-4">
-                                <div class="col-12 mb-2 text-6xl text-900">Instalación de Sistemas Fotovoltaicos</div>
+                                <div class="col-12 mb-2 text-6xl">Instalación de Sistemas Fotovoltaicos</div>
                                 <span class="col-12 text-2xl">
                                     Son alguna de las principales características del uso de energías renovables.
                                     Ingeap Agro, cuenta con una basta experiencia en la instalación de sistemas Fotovoltaicos,
                                     los cuales permiten también pueden conferirle autonomía a artículos que necesiten electricidad y 
                                     que se encuentren lejos de la fuente.  
                                 </span>
-                            </div>   
+                            </div>
                         </div>
+                        <div class="col-3"></div>
                     </div>
-                </div>  
-            
+                </div>
             </div>
-        </div>   
-        
+        </div>        
         <div id="" class="px-4 bg-gray-100 text-center" style="width: 100vw;">
             <div class="grid justify-content-center">
                 <div class="col-12 text-center mt-3 mb-4">
@@ -42,7 +37,7 @@
                                 </div>
                             </div>
                             <div class="mb-2 text-2xl text-900">Energía Limpia y Renovable</div>
-                            <span class="text-600">La energía solar es una fuente de energía limpia que no produce emisiones de gases de efecto invernadero ni otros contaminantes. A su vez disminuye la cantidad de carbono liberado a la atmósfera, contribuyendo a la lucha contra el cambio climático.</span>
+                            <span class="text-lg">La energía solar es una fuente de energía limpia que no produce emisiones de gases de efecto invernadero ni otros contaminantes. A su vez disminuye la cantidad de carbono liberado a la atmósfera, contribuyendo a la lucha contra el cambio climático.</span>
                         </div>
                     </div>
                 </div>
@@ -56,7 +51,7 @@
                                 </div>
                             </div>
                             <div class="mb-2 text-2xl text-900">Disminución de Costos Fijos</div>
-                            <span class="text-600">Al usar energía obtenida desde una fuente natural, solo se debe pagar el costo inicial de instalación y no un costo fijo que pagar a una empresa externa de electricidad.</span>
+                            <span class="text-lg">Al usar energía obtenida desde una fuente natural, solo se debe pagar el costo inicial de instalación y no un costo fijo que pagar a una empresa externa de electricidad.</span>
                         </div>
                     </div>
                 </div>
@@ -70,7 +65,7 @@
                                 </div>
                             </div>
                             <div class="mb-2 text-2xl text-900">Ingreso de Excedentes  a la red</div>
-                            <span class="text-600">La energía que no logre ser utilizada en el sistema ON Grid, puede ser integrado al sistema eléctrico, lo cual puede generar ingresos extra. Esto debe ser autorizado con el TE-4 en la SEC.</span>
+                            <span class="text-lg">La energía que no logre ser utilizada en el sistema ON Grid, puede ser integrado al sistema eléctrico, lo cual puede generar ingresos extra. Esto debe ser autorizado con el TE-4 en la SEC.</span>
                         </div>
                     </div>
                 </div>
@@ -84,54 +79,73 @@
                                 </div>
                             </div>
                             <div class="mb-2 text-2xl text-900">Acceso a energía en áreas remotas</div>
-                            <span class="text-600">Los sistemas fotovoltaicos pueden proporcionar electricidad en zonas donde la red eléctrica no llega, mejorando la calidad de vida y promoviendo el desarrollo económico.</span>
+                            <span class="text-lg">Los sistemas fotovoltaicos pueden proporcionar electricidad en zonas donde la red eléctrica no llega, mejorando la calidad de vida y promoviendo el desarrollo económico.</span>
                         </div>
                     </div>
                 </div>          
             </div>
         </div>
 
-        <div class="grid justify-content-center md:mt-0 bg-gray-100 text-center">
+        <div class="grid md:mt-0 bg-gray-100 text-center">
             <div class="col-12 text-center mt-3 mb-4">
                 <h2 class="text-5xl font-normal mb-2">Tipos de Sistemas Fotovoltaicos</h2>
             </div>
         
-            <!-- Primera fila -->
-            <div class="col-12 flex justify-content-center mb-4">
-                <div class="card grid col-12 md:col-12 lg:col-8 xl:col-6 align-items-center">
-                    <div class="col-6">
-                        <img src="assets/ingeap-agro/iconos/98.png" class="h-25rem w-25rem" alt="on grid">
+            <div class="col-12">
+                <!-- Contenedor para las tres tarjetas en una fila -->
+                <div class="grid col-12">
+                    <!-- Tarjeta 1 -->
+                    <div class="col-12 md:col-4 mb-4 flex">
+                        <div class="card relative flex flex-column justify-content-between" style="height: 100%; width: 100%;">
+                            <h3 class="card-title text-left text-2xl font-bold absolute top-0 left-0 p-2 ml-2">Sistema On-Grid</h3>
+                            <img src="assets/ingeap-agro/iconos/98.png" class="h-25rem w-25rem mt-8" alt="on grid">
+                            <div>
+                                <p class="text-3xl">Beneficios con el sistema on-grid.</p>
+                                <ul class="text-xl text-left ml-4">
+                                    <li>Más económico.</li>
+                                    <li>No permite baterías.</li>
+                                    <li>Se puede realizar inyección de excedentes a la red, declarando TE-4 en la SEC.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-6">
-                        <p>Texto relacionado con el sistema on-grid.</p>
+                
+                    <!-- Tarjeta 2 -->
+                    <div class="col-12 md:col-4 mb-4 flex">
+                        <div class="card relative flex flex-column justify-content-between" style="height: 100%; width: 100%;">
+                            <h3 class="card-title text-left text-2xl font-bold absolute top-0 left-0 p-2 ml-2">Sistema Off-Grid</h3>
+                            <img src="assets/ingeap-agro/iconos/99.png" class="h-25rem w-25rem mt-8" alt="off grid">
+                            <div>
+                                <p class="text-3xl">Beneficios con el sistema off-grid.</p>
+                                <ul class="text-xl text-left ml-4">
+                                    <li>Se alcanza total independencia de la red eléctrica.</li>
+                                    <li>Se puede instalar en sectores remotos.</li>
+                                    <li>Puede integrar un generador de energía.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Tarjeta 3 -->
+                    <div class="col-12 md:col-4 mb-4 flex">
+                        <div class="card relative flex flex-column justify-content-between" style="height: 100%; width: 100%;">
+                            <h3 class="card-title text-left text-2xl font-bold absolute top-0 left-0 p-2 ml-2">Sistema ESS</h3>
+                            <img src="assets/ingeap-agro/iconos/97.png" class="h-25rem w-25rem mt-8" alt="ess">
+                            <div>
+                                <p class="text-3xl">Beneficios con el sistema ESS.</p>
+                                <ul class="text-xl text-left ml-4">
+                                    <li>Optimiza el consumo solar.</li>
+                                    <li>Posibilidad de disminuir consumo en horas punta.</li>
+                                    <li>Respaldo ante cortes de luz a las cargas críticas.</li>
+                                    <li>Puede utilizarse en conjunto a sistema ON-Grid.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        
-            <!-- Segunda fila -->
-            <div class="col-12 flex justify-content-center mb-4">
-                <div class="card grid col-12 md:col-12 lg:col-8 xl:col-6 align-items-center">
-                    <div class="col-6">
-                        <p>Texto relacionado con el sistema off-grid.</p>
-                    </div>
-                    <div class="col-6">
-                        <img src="assets/ingeap-agro/iconos/99.png" class="h-25rem w-25rem" alt="off grid">
-                    </div>
-                </div>
-            </div>
-        
-            <!-- Tercera fila -->
-            <div class="col-12 flex justify-content-center mb-4">
-                <div class="card grid col-12 md:col-12 lg:col-8 xl:col-6 align-items-center">
-                    <div class="col-6">
-                        <img src="assets/ingeap-agro/iconos/97.png" class="h-25rem w-25rem" alt="ess">
-                    </div>
-                    <div class="col-6">
-                        <p>Texto relacionado con el sistema ESS.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+            </div>            
+            
+        </div>        
         
         <div id="" class="px-4 text-center" style="width: 100vw;">
             <div class="grid justify-content-center">
