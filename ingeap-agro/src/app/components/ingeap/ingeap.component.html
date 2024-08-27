@@ -15,12 +15,12 @@
                         <div class="carousel-background" [ngStyle]="{'background-image': 'url(' + product.image + ')'}"></div>
                         <div class="carousel-overlay"></div>
                         <div class="carousel-content">
-                            <div class="corner top-left"></div>
-                            <div class="corner top-right"></div>
-                            <div class="corner bottom-left"></div>
-                            <div class="corner bottom-right"></div>
+                            <div class="corner top-left ocultar-en-movil" ></div>
+                            <div class="corner top-right ocultar-en-movil"></div>
+                            <div class="corner bottom-left ocultar-en-movil"></div>
+                            <div class="corner bottom-right ocultar-en-movil"></div>
                             <h1 class="text-7xl text-white text-center">{{product.name}}</h1>
-                            <p class="text-4xl text-white text-center">{{product.detalle}}</p>
+                            <p class="text-4xl text-white text-center ocultar-en-movil">{{product.detalle}}</p>
                         </div>
                     </div>
                 </ng-template>
@@ -70,7 +70,7 @@
             <div class="grid mt-6 md:pb-8">
                 <div class="col-12 my-auto flex flex-column">
                     <div class="grid">
-                        <div class="col-6">
+                        <div class="col-12 lg:md-6 md:col-6">
                             <h2 class="line-height-1 text-900 text-4xl font-normal text-left">NUESTRA HISTORIA</h2>
                             <span class="text-xl line-height-3 mx-auto text-left pb-2">
                                 Contamos con más de 25 años de trayectoria en proyectos de ingeniería y montaje eléctricos industriales.
@@ -81,7 +81,7 @@
                                 Actualmente nuestra casa matriz está en la Quinta región y tenemos cobertura en la primera y segunda región del país, 
                                 con instalaciones en Nueva Victoria, María Elena y Antofagasta.</span>
                         </div>
-                        <div class="col-6">
+                        <div class="col-6 ocultar-en-movil">
                             <div class="col-12 image-section pt-4">
                                 <div class="image-container" routerLink="/ruta1">
                                   <img src="assets/ingeap/menu-ingeap/53.jpeg" alt="Imagen 1">
@@ -95,7 +95,7 @@
                             </div>   
                         </div>
                     </div>
-                    <div class="grid h-30rem menu-bk">
+                    <div class="grid h-30rem menu-bk ocultar-en-movil">
                         <div class="col-1"></div>
                         <div class="col-5 flex align-items-center justify-content-center">
                             <div class="text-center">
@@ -122,7 +122,7 @@
                         </div>
                         <div class="col-1"></div>
                     </div>
-                    <div class="grid mt-5">
+                    <div class="grid mt-5 ocultar-en-movil">
                         <div class="col-12 image-section pt-4">
                             <div class="image-container" routerLink="/ruta1">
                               <img src="assets/ingeap/menu-ingeap/52.JPG" alt="Imagen 1">
@@ -147,7 +147,7 @@
                               </div>
                         </div>  
                     </div>
-                    <div class="grid mt-5">
+                    <div class="grid mt-5 ocultar-en-movil">
                         <div class="col-2"></div>
                         <div class="col-8 text-center">
                             <h2 class="line-height-1 text-900 text-4xl font-normal">EMPRESA EN EXPANSIÓN</h2>
@@ -169,22 +169,22 @@
                         <div class="col-2"></div>
                     </div>
                     <div class="grid">
-                        <div class="col-2"></div>
-                        <div class="col-8 image-section pt-4">
-                            <div class="image-container h-30rem">
+                        <div class="col-2 ocultar-en-movil"></div>
+                        <div class="col- 12 lg:col-8 image-section pt-4">
+                            <div class="image-container h-30rem" (click)="navegarSalas()">
                               <img src="assets/ingeap/menu-ingeap/61.jpeg"  class="h-30rem" alt="Imagen 1">
                               <div class="info-overlay text-xl">Salas Eléctricas Chile</div>
                             </div>
-                            <div class="image-container h-30rem">
+                            <div class="image-container h-30rem" (click)="navegarIngeap()">
                               <img src="assets/ingeap/menu-ingeap/59.JPG" class="h-30rem"  alt="Imagen 2">
                               <div class="info-overlay text-xl">Ingeap Servicios</div>
                             </div>
-                            <div class="image-container h-30rem">
+                            <div class="image-container h-30rem" (click)="navegarIngeapAgro()">
                               <img src="assets/ingeap/menu-ingeap/62.jpg" class="h-30rem"  alt="Imagen 3">
                               <div class="info-overlay text-xl">Ingeap Agro</div>
                             </div>
                         </div>  
-                        <div class="col-2"></div>
+                        <div class="col-2 ocultar-en-movil"></div>
                     </div>
                 </div>  
             

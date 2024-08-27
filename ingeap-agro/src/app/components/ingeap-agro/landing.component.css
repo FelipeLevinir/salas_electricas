@@ -1,3 +1,9 @@
+@media (max-width: 768px) {
+    .ocultar-en-movil {
+      display: none;
+    }
+}
+
 .carousel-item {
     width: 100%;
     height: 650px;
@@ -76,6 +82,21 @@
 }
 .border-md-right:not(:last-child) {
     border-right: 2px solid green;
+}
+
+@media (max-width: 768px) {
+    .overlay-block {
+        border: none;
+        width: 100%;
+    }
+
+    .overlay-block .border-md-right:not(:last-child) {
+        border-right: none; /* Elimina el borde derecho azul en móviles */
+    }
+
+    .overlay-block .col-12 span {
+        font-size: 2rem; /* Aumenta el tamaño del texto */
+    }
 }
 
 .corner1 {
@@ -237,5 +258,38 @@
 @media (max-width: 480px) {
     .image-container {
         max-width: 100%;
+    }
+}
+
+
+.social-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+  
+  .social-img {
+    width: 100%;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .social-img {
+      height: auto;
+    }
+  }
+  
+
+.beneficios {
+    height:200px; 
+    padding:2px; 
+    border-radius:10px; 
+    background: linear-gradient(90deg, rgba(253, 228, 165, 0.2),rgba(187, 199, 205, 0.2)), linear-gradient(180deg, rgba(253, 228, 165, 0.2),rgba(187, 199, 205, 0.2));
+}
+
+@media (max-width: 768px) {
+    .beneficios {
+        height:250px; 
     }
 }
