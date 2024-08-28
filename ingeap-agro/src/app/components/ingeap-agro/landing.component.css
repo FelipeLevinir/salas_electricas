@@ -293,3 +293,9 @@
         height:250px; 
     }
 }
+
+@media (max-width: 2560px) {
+    .beneficios {
+        height:220px; 
+    }
+}

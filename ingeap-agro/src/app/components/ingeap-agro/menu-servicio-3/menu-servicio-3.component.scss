@@ -12,3 +12,9 @@
     text-align: center;
     padding: 20px; /* Añade un poco de padding para separar el texto de los bordes */
 }
+
+@media (max-width: 768px) {
+    .ocultar-en-movil {
+      display: none;
+    }
+}
