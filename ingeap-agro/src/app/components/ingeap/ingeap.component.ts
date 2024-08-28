@@ -77,7 +77,7 @@ export class IngeapComponent implements OnInit{
         },
         {
             breakpoint: '991px',
-            numVisible: 2,
+            numVisible: 1,
             numScroll: 1
         },
         {

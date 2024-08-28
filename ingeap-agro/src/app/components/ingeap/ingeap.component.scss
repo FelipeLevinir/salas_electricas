@@ -47,6 +47,17 @@
 .carousel-content h1 {
     color: white; /* Título en blanco */
     margin-bottom: 10px; /* Espacio entre el título y el párrafo */
+
+
+    @media (max-width: 1024px ){
+      font-size: calc(12px + 3vw) !important;
+    }
+
+}
+.carousel-content p {
+    @media (max-width: 1024px ){
+      font-size: calc(8px + 1vw) !important;
+    }
 }
 
 :host ::ng-deep .custom-carousel .p-carousel-indicators {
@@ -165,10 +176,38 @@
     border-right: 2px solid #3571c5;
 }
 
+@media (max-width: 1134px) {
+    .overlay-block {
+        height: 20%;
+        width: 80%;
+    }
+
+    .overlay-block .border-md-right:not(:last-child) {
+        border-right: none;
+    }
+    .img-responsive{
+        width: 80% !important;
+        height: 80% !important;
+    }
+}
+
 @media (max-width: 768px) {
     .overlay-block {
         border: none;
         width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    #elemento_chico{
+        display: flex;
+        flex-direction: row !important;
+        
+    }
+    #elemento_chico span{
+        font-size: calc(5px + 3vw);
     }
 
     .overlay-block .border-md-right:not(:last-child) {

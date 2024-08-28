@@ -20,14 +20,14 @@
                             <div class="corner bottom-left ocultar-en-movil"></div>
                             <div class="corner bottom-right ocultar-en-movil"></div>
                             <h1 class="text-7xl text-white text-center">{{product.name}}</h1>
-                            <p class="text-4xl text-white text-center ocultar-en-movil">{{product.detalle}}</p>
+                            <p id="parrafo_slider" class="text-4xl text-white text-center ocultar-en-movil">{{product.detalle}}</p>
                         </div>
                     </div>
                 </ng-template>
             </p-carousel>
                 
             <div class="grid overlay-block">
-                <div class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl border-md-right">
+                <div id="elemento_chico" class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl border-md-right">
                     <div class="flex align-items-center justify-content-center" 
                         style="width:6rem;height:6rem; border-radius:10px;">
                         <img [src]="imagenSrc1"
@@ -35,11 +35,11 @@
                             (mouseout)="cambiarImagen1(false)"
                             (click)="navegarSalas()"
                             alt="Salas Eléctricas Chile" 
-                            style="width: 100%; height: 100%; object-fit: contain; border-radius:10px; cursor: pointer;">
+                            style="width: 100%; height: 100%; object-fit: contain; border-radius:10px; cursor: pointer;" class="img-responsive">
                     </div>
-                    <span>Salas Eléctricas Chile</span>
+                    <span class="">Salas Eléctricas Chile</span>
                 </div>
-                <div class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl border-md-right">
+                <div id="elemento_chico" class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl border-md-right">
                     <div class="flex align-items-center justify-content-center" 
                         style="width:6rem;height:6rem; border-radius:10px;">
                         <img [src]="imagenSrc2"
@@ -47,11 +47,11 @@
                             (mouseout)="cambiarImagen2(false)"
                             (click)="navegarIngeap()"
                             alt="Ingeap Servicios" 
-                            style="width: 100%; height: 100%; object-fit: contain; border-radius:10px; cursor: pointer;">
+                            style="width: 100%; height: 100%; object-fit: contain; border-radius:10px; cursor: pointer;" class="img-responsive">
                     </div>
-                    <span>Ingeap Servicios</span>
+                    <span class="">Ingeap Servicios</span>
                 </div>   
-                <div class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl border-md-right">
+                <div id="elemento_chico" class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl border-md-right">
                     <div class="flex align-items-center justify-content-center" 
                         style="width:6rem;height:6rem; border-radius:10px;">
                         <img [src]="imagenSrc3"
@@ -59,12 +59,13 @@
                             (mouseout)="cambiarImagen3(false)"
                             (click)="navegarIngeapAgro()"
                             alt="Ingeap Agro" 
-                            style="width: 100%; height: 100%; object-fit: contain; border-radius:10px; cursor: pointer;">
+                            style="width: 100%; height: 100%; object-fit: contain; border-radius:10px; cursor: pointer;" class="img-responsive">
                     </div>
-                    <span>Ingeap Agro</span>
+                    <span class="">Ingeap Agro</span>
                 </div>               
             </div>
-        </div>        
+        </div>       
+         
 
         <div id="historia" class="py-2 px-4 bg-gray-100 ">    
             <div class="grid mt-6 md:pb-8">
