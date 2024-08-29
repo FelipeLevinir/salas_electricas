@@ -5,6 +5,8 @@ import { LayoutService } from 'src/app/layout/service/app.layout.service';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { ButtonModule } from 'primeng/button';
+import { HeaderComponent } from '../header/header.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-contacto',
@@ -13,7 +15,9 @@ import { ButtonModule } from 'primeng/button';
     CommonModule,
     InputTextModule,
     InputTextareaModule,
-    ButtonModule
+    ButtonModule,
+    HeaderComponent,
+    FooterComponent
   ],
   templateUrl: './contacto.component.html',
   styleUrl: './contacto.component.scss'

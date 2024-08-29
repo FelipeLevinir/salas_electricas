@@ -1,371 +1,376 @@
-<app-header></app-header>
-<div class="surface-0 flex justify-content-center">
-    <div id="home-ingeap" class="landing-wrapper overflow-hidden">
-        <div #parentDiv>
-            <p-carousel 
-                [value]="products" 
-                [numVisible]="1" 
-                [numScroll]="1" 
-                [circular]="true" 
-                [responsiveOptions]="responsiveOptions" 
-                autoplayInterval="4000"
-                class="custom-carousel">
-                <ng-template let-product pTemplate="item">
-                    <div class="carousel-item flex align-items-center justify-content-center">
-                        <div class="carousel-background" [ngStyle]="{'background-image': 'url(' + product.image + ')'}"></div>
-                        <div class="carousel-overlay"></div>
-                        <div class="carousel-content">
-                            <div class="corner top-left ocultar-en-movil" ></div>
-                            <div class="corner top-right ocultar-en-movil"></div>
-                            <div class="corner bottom-left ocultar-en-movil"></div>
-                            <div class="corner bottom-right ocultar-en-movil"></div>
-                            <h1 class="text-7xl text-white text-center">{{product.name}}</h1>
-                            <p id="parrafo_slider" class="text-4xl text-white text-center ocultar-en-movil">{{product.detalle}}</p>
+<div class="min-h-screen flex flex-column">    
+    <div style="position: fixed; z-index: 1000; background-color: #f5f5f5; width: 100%;">
+        <app-header></app-header>
+    </div>
+    <div class="surface-0 flex justify-content-center mt-2">
+        <div class="landing-wrapper overflow-hidden">
+            <div id="home-ingeap" style="margin-top: 5.625rem !important;" #parentDiv>
+                <p-carousel 
+                    [value]="products" 
+                    [numVisible]="1" 
+                    [numScroll]="1" 
+                    [circular]="true" 
+                    [responsiveOptions]="responsiveOptions" 
+                    autoplayInterval="4000"
+                    class="custom-carousel">
+                    <ng-template let-product pTemplate="item">
+                        <div class="carousel-item flex align-items-center justify-content-center">
+                            <div class="carousel-background" [ngStyle]="{'background-image': 'url(' + product.image + ')'}"></div>
+                            <div class="carousel-overlay"></div>
+                            <div class="carousel-content">
+                                <div class="corner top-left ocultar-en-movil" ></div>
+                                <div class="corner top-right ocultar-en-movil"></div>
+                                <div class="corner bottom-left ocultar-en-movil"></div>
+                                <div class="corner bottom-right ocultar-en-movil"></div>
+                                <h1 class="text-7xl text-white text-center">{{product.name}}</h1>
+                                <p id="parrafo_slider" class="text-4xl text-white text-center ocultar-en-movil">{{product.detalle}}</p>
+                            </div>
                         </div>
+                    </ng-template>
+                </p-carousel>
+                    
+                <div class="grid overlay-block">
+                    <div id="elemento_chico" class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl border-md-right">
+                        <div class="flex align-items-center justify-content-center" 
+                            style="width:6rem;height:6rem; border-radius:10px;">
+                            <img [src]="imagenSrc1"
+                                (mouseover)="cambiarImagen1(true)"
+                                (mouseout)="cambiarImagen1(false)"
+                                (click)="navegarSalas()"
+                                alt="Salas Eléctricas Chile" 
+                                style="width: 100%; height: 100%; object-fit: contain; border-radius:10px; cursor: pointer;" class="img-responsive">
+                        </div>
+                        <span class="">Salas Eléctricas Chile</span>
                     </div>
-                </ng-template>
-            </p-carousel>
-                
-            <div class="grid overlay-block">
-                <div id="elemento_chico" class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl border-md-right">
-                    <div class="flex align-items-center justify-content-center" 
-                        style="width:6rem;height:6rem; border-radius:10px;">
-                        <img [src]="imagenSrc1"
-                            (mouseover)="cambiarImagen1(true)"
-                            (mouseout)="cambiarImagen1(false)"
-                            (click)="navegarSalas()"
-                            alt="Salas Eléctricas Chile" 
-                            style="width: 100%; height: 100%; object-fit: contain; border-radius:10px; cursor: pointer;" class="img-responsive">
-                    </div>
-                    <span class="">Salas Eléctricas Chile</span>
+                    <div id="elemento_chico" class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl border-md-right">
+                        <div class="flex align-items-center justify-content-center" 
+                            style="width:6rem;height:6rem; border-radius:10px;">
+                            <img [src]="imagenSrc2"
+                                (mouseover)="cambiarImagen2(true)"
+                                (mouseout)="cambiarImagen2(false)"
+                                (click)="navegarIngeap()"
+                                alt="Ingeap Servicios" 
+                                style="width: 100%; height: 100%; object-fit: contain; border-radius:10px; cursor: pointer;" class="img-responsive">
+                        </div>
+                        <span class="">Ingeap Servicios</span>
+                    </div>   
+                    <div id="elemento_chico" class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl border-md-right">
+                        <div class="flex align-items-center justify-content-center" 
+                            style="width:6rem;height:6rem; border-radius:10px;">
+                            <img [src]="imagenSrc3"
+                                (mouseover)="cambiarImagen3(true)"
+                                (mouseout)="cambiarImagen3(false)"
+                                (click)="navegarIngeapAgro()"
+                                alt="Ingeap Agro" 
+                                style="width: 100%; height: 100%; object-fit: contain; border-radius:10px; cursor: pointer;" class="img-responsive">
+                        </div>
+                        <span class="">Ingeap Agro</span>
+                    </div>               
                 </div>
-                <div id="elemento_chico" class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl border-md-right">
-                    <div class="flex align-items-center justify-content-center" 
-                        style="width:6rem;height:6rem; border-radius:10px;">
-                        <img [src]="imagenSrc2"
-                            (mouseover)="cambiarImagen2(true)"
-                            (mouseout)="cambiarImagen2(false)"
-                            (click)="navegarIngeap()"
-                            alt="Ingeap Servicios" 
-                            style="width: 100%; height: 100%; object-fit: contain; border-radius:10px; cursor: pointer;" class="img-responsive">
-                    </div>
-                    <span class="">Ingeap Servicios</span>
-                </div>   
-                <div id="elemento_chico" class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl border-md-right">
-                    <div class="flex align-items-center justify-content-center" 
-                        style="width:6rem;height:6rem; border-radius:10px;">
-                        <img [src]="imagenSrc3"
-                            (mouseover)="cambiarImagen3(true)"
-                            (mouseout)="cambiarImagen3(false)"
-                            (click)="navegarIngeapAgro()"
-                            alt="Ingeap Agro" 
-                            style="width: 100%; height: 100%; object-fit: contain; border-radius:10px; cursor: pointer;" class="img-responsive">
-                    </div>
-                    <span class="">Ingeap Agro</span>
-                </div>               
-            </div>
-        </div>       
-         
-
-        <div id="historia" class="py-2 px-4 bg-gray-100 ">    
-            <div class="grid mt-6 md:pb-8">
-                <div class="col-12 my-auto flex flex-column">
-                    <div class="grid">
-                        <div class="col-12 lg:md-6 md:col-6">
-                            <h2 class="line-height-1 text-900 text-4xl font-normal text-left">NUESTRA HISTORIA</h2>
-                            <span class="text-xl line-height-3 mx-auto text-left pb-2">
-                                Contamos con más de 25 años de trayectoria en proyectos de ingeniería y montaje eléctricos industriales.
-                                Nuestra oferta abarca una solución integral que se extiende desde el diseño inicial hasta la ejecución final del montaje, 
-                                especializándonos en áreas críticas como la ingeniería eléctrica, electrónica, mecánica y de automatización, 
-                                integrando soluciones tecnológicas de las principales marcas del mercado. Somos integradores oficiales de Schneider Electric y ABB, 
-                                contando con el apoyo de fabrica para proyectos de mayor envergadura, con la más alta eficiencia y calidad. 
-                                Actualmente nuestra casa matriz está en la Quinta región y tenemos cobertura en la primera y segunda región del país, 
-                                con instalaciones en Nueva Victoria, María Elena y Antofagasta.</span>
+            </div>       
+            
+            <div id="historia" class="py-2 px-4 bg-gray-100 ">    
+                <div class="grid mt-6 md:pb-8">
+                    <div class="col-12 my-auto flex flex-column">
+                        <div class="grid pb-2 mb-2">
+                            <div class="col-12 lg:md-6 md:col-6">
+                                <h2 class="line-height-1 text-900 text-4xl font-normal text-left">NUESTRA HISTORIA</h2>
+                                <span class="text-xl line-height-3 mx-auto text-left pb-2">
+                                    Contamos con más de 25 años de trayectoria en proyectos de ingeniería y montaje eléctricos industriales.
+                                    Nuestra oferta abarca una solución integral que se extiende desde el diseño inicial hasta la ejecución final del montaje, 
+                                    especializándonos en áreas críticas como la ingeniería eléctrica, electrónica, mecánica y de automatización, 
+                                    integrando soluciones tecnológicas de las principales marcas del mercado. Somos integradores oficiales de Schneider Electric y ABB, 
+                                    contando con el apoyo de fabrica para proyectos de mayor envergadura, con la más alta eficiencia y calidad. 
+                                    Actualmente nuestra casa matriz está en la Quinta región y tenemos cobertura en la primera y segunda región del país, 
+                                    con instalaciones en Nueva Victoria, María Elena y Antofagasta.</span>
+                            </div>
+                            <div class="col-6 ocultar-en-movil">
+                                <div class="col-12 image-section pt-4">
+                                    <div class="image-container" routerLink="/ruta1">
+                                    <img src="assets/ingeap/menu-ingeap/53.jpeg" alt="Imagen 1">
+                                    </div>
+                                    <div class="image-container" routerLink="/ruta2">
+                                    <img src="assets/ingeap/menu-ingeap/59.JPG" alt="Imagen 2">
+                                    </div>
+                                    <div class="image-container" routerLink="/ruta3">
+                                        <img src="assets/ingeap/menu-ingeap/60.jpeg" alt="Imagen 5">
+                                    </div>
+                                </div>   
+                            </div>
                         </div>
-                        <div class="col-6 ocultar-en-movil">
+                        <div class="grid h-30rem menu-bk ocultar-en-movil">
+                            <div class="col-1"></div>
+                            <div class="col-5 flex align-items-center justify-content-center">
+                                <div class="text-center">
+                                    <span class="text-7xl block">
+                                        VISIÓN  
+                                    </span>
+                                    <span class="text-5xl block">Y</span>
+                                    <span class="text-7xl block">
+                                        MISIÓN
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-5 flex align-items-center justify-content-center">
+                                <div class="text-justify">
+                                    <span class="text-xl line-height-3 mx-auto m-5" style="color: #2e2e2e !important;">
+                                        Nuestro objetivo es ayudar a concretar proyectos y satisfacer necesidades de ingeniería eléctrica con costos competitivos,
+                                        manteniendo un compromiso inquebrantable con la seguridad y la calidad comparable a las mejores empresas del mercado. 
+                                        Buscamos ser reconocidos en el mercado como una empresa confiable, que aporta a nuestros clientes conocimientos y experiencia
+                                        en cada proyecto que emprendemos. Nos esforzamos por establecer relaciones de confianza y colaboración, garantizando resultados 
+                                        excepcionales y soluciones innovadoras que superen las expectativas de nuestros clientes. Así, consolidamos nuestra reputación
+                                        como líderes en el sector de ingeniería eléctrica.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-1"></div>
+                        </div>
+                        <div class="grid mt-5 ocultar-en-movil">
                             <div class="col-12 image-section pt-4">
                                 <div class="image-container" routerLink="/ruta1">
-                                  <img src="assets/ingeap/menu-ingeap/53.jpeg" alt="Imagen 1">
+                                <img src="assets/ingeap/menu-ingeap/52.JPG" alt="Imagen 1">
                                 </div>
                                 <div class="image-container" routerLink="/ruta2">
-                                  <img src="assets/ingeap/menu-ingeap/59.JPG" alt="Imagen 2">
+                                <img src="assets/ingeap/menu-ingeap/53.jpeg" alt="Imagen 2">
                                 </div>
                                 <div class="image-container" routerLink="/ruta3">
-                                    <img src="assets/ingeap/menu-ingeap/60.jpeg" alt="Imagen 5">
+                                <img src="assets/ingeap/menu-ingeap/54.jpeg" alt="Imagen 3">
                                 </div>
-                            </div>   
+                                <div class="image-container" routerLink="/ruta4">
+                                <img src="assets/ingeap/menu-ingeap/55.JPG" alt="Imagen 4">
+                                </div>
+                                <div class="image-container" routerLink="/ruta3">
+                                    <img src="assets/ingeap/menu-ingeap/56.jpeg" alt="Imagen 3">
+                                </div>
+                                <div class="image-container" routerLink="/ruta4">
+                                    <img src="assets/ingeap/menu-ingeap/57.jpeg" alt="Imagen 4">
+                                </div>
+                                <div class="image-container" routerLink="/ruta4">
+                                    <img src="assets/ingeap/menu-ingeap/58.jpeg" alt="Imagen 4">
+                                </div>
+                            </div>  
                         </div>
-                    </div>
-                    <div class="grid h-30rem menu-bk ocultar-en-movil">
-                        <div class="col-1"></div>
-                        <div class="col-5 flex align-items-center justify-content-center">
-                            <div class="text-center">
-                                <span class="text-7xl block">
-                                    VISIÓN  
+                        <div class="grid mt-5 ocultar-en-movil">
+                            <div class="col-1"></div>
+                            <div class="col-10 text-center">
+                                <h2 class="line-height-1 text-900 text-4xl font-normal">EMPRESA EN EXPANSIÓN</h2>
+                                <span class="text-xl text-lg line-height-3 mx-auto">
+                                    En INGEAP, estamos comprometidos con el progreso tecnológico y la excelencia. 
+                                    Una de nuestras labores relevante es mantenernos al tanto de las soluciones y 
+                                    productos tecnológicos de vanguardia para ofrecer a nuestros clientes soluciones efectivas, 
+                                    seguras, y de costo competitivo. En respuesta a la creciente demanda de soluciones 
+                                    especializadas en el diseño, construcción y montaje de equipos de control, protección, y 
+                                    gestión eléctrica hemos decidido dar un paso estratégico en base a nuestra experiencia y 
+                                    el éxito sostenido que se ha logrado con las salas eléctricas modulares, y por lo tanto, 
+                                    utilizamos el dominio "Salas Eléctricas Chile" para ofrecer de forma exclusiva, la ingeniería, 
+                                    construcción y montaje de salas eléctricas modulares pre fabricadas. Adicionalmente hemos expandido 
+                                    nuestras operaciones al sector agrícola con Ingeap Agro. Incorporando profesionales del área (ingenería agrónoma),
+                                    en conjunto con nuestras otras áreas de especialización buscamos entregar soluciones innovadoras 
+                                    e integrales a las problemáticas del agricultor.
                                 </span>
-                                <span class="text-5xl block">Y</span>
-                                <span class="text-7xl block">
-                                    MISIÓN
-                                </span>
                             </div>
+                            <div class="col-1"></div>
                         </div>
-                        <div class="col-5 flex align-items-center justify-content-center">
-                            <div class="text-justify">
-                                <span class="text-xl line-height-3 mx-auto m-5" style="color: #2e2e2e !important;">
-                                    Nuestro objetivo es ayudar a concretar proyectos y satisfacer necesidades de ingeniería eléctrica con costos competitivos,
-                                    manteniendo un compromiso inquebrantable con la seguridad y la calidad comparable a las mejores empresas del mercado. 
-                                    Buscamos ser reconocidos en el mercado como una empresa confiable, que aporta a nuestros clientes conocimientos y experiencia
-                                    en cada proyecto que emprendemos. Nos esforzamos por establecer relaciones de confianza y colaboración, garantizando resultados 
-                                    excepcionales y soluciones innovadoras que superen las expectativas de nuestros clientes. Así, consolidamos nuestra reputación
-                                    como líderes en el sector de ingeniería eléctrica.
-                                </span>
-                            </div>
+                        <div class="grid">
+                            <div class="col-2 ocultar-en-movil"></div>
+                            <div class="col- 12 lg:col-8 image-section pt-4">
+                                <div class="image-container h-30rem" (click)="navegarSalas()">
+                                <img src="assets/ingeap/menu-ingeap/61.jpeg"  class="h-30rem" alt="Imagen 1">
+                                <div class="info-overlay text-xl">Salas Eléctricas Chile</div>
+                                </div>
+                                <div class="image-container h-30rem" (click)="navegarIngeap()">
+                                <img src="assets/ingeap/menu-ingeap/59.JPG" class="h-30rem"  alt="Imagen 2">
+                                <div class="info-overlay text-xl">Ingeap Servicios</div>
+                                </div>
+                                <div class="image-container h-30rem" (click)="navegarIngeapAgro()">
+                                <img src="assets/ingeap/menu-ingeap/62.jpg" class="h-30rem"  alt="Imagen 3">
+                                <div class="info-overlay text-xl">Ingeap Agro</div>
+                                </div>
+                            </div>  
+                            <div class="col-2 ocultar-en-movil"></div>
                         </div>
-                        <div class="col-1"></div>
-                    </div>
-                    <div class="grid mt-5 ocultar-en-movil">
-                        <div class="col-12 image-section pt-4">
-                            <div class="image-container" routerLink="/ruta1">
-                              <img src="assets/ingeap/menu-ingeap/52.JPG" alt="Imagen 1">
-                            </div>
-                            <div class="image-container" routerLink="/ruta2">
-                              <img src="assets/ingeap/menu-ingeap/53.jpeg" alt="Imagen 2">
-                            </div>
-                            <div class="image-container" routerLink="/ruta3">
-                              <img src="assets/ingeap/menu-ingeap/54.jpeg" alt="Imagen 3">
-                            </div>
-                            <div class="image-container" routerLink="/ruta4">
-                              <img src="assets/ingeap/menu-ingeap/55.JPG" alt="Imagen 4">
-                            </div>
-                            <div class="image-container" routerLink="/ruta3">
-                                <img src="assets/ingeap/menu-ingeap/56.jpeg" alt="Imagen 3">
-                              </div>
-                              <div class="image-container" routerLink="/ruta4">
-                                <img src="assets/ingeap/menu-ingeap/57.jpeg" alt="Imagen 4">
-                              </div>
-                              <div class="image-container" routerLink="/ruta4">
-                                <img src="assets/ingeap/menu-ingeap/58.jpeg" alt="Imagen 4">
-                              </div>
-                        </div>  
-                    </div>
-                    <div class="grid mt-5 ocultar-en-movil">
-                        <div class="col-2"></div>
-                        <div class="col-8 text-center">
-                            <h2 class="line-height-1 text-900 text-4xl font-normal">EMPRESA EN EXPANSIÓN</h2>
-                            <span class="text-xl text-lg line-height-3 mx-auto">
-                                En INGEAP, estamos comprometidos con el progreso tecnológico y la excelencia. 
-                                Una de nuestras labores relevante es mantenernos al tanto de las soluciones y 
-                                productos tecnológicos de vanguardia para ofrecer a nuestros clientes soluciones efectivas, 
-                                seguras, y de costo competitivo. En respuesta a la creciente demanda de soluciones 
-                                especializadas en el diseño, construcción y montaje de equipos de control, protección, y 
-                                gestión eléctrica hemos decidido dar un paso estratégico en base a nuestra experiencia y 
-                                el éxito sostenido que se ha logrado con las salas eléctricas modulares, y por lo tanto, 
-                                utilizamos el dominio "Salas Eléctricas Chile" para ofrecer de forma exclusiva, la ingeniería, 
-                                construcción y montaje de salas eléctricas modulares pre fabricadas. Adicionalmente hemos expandido 
-                                nuestras operaciones al sector agrícola con Ingeap Agro. Incorporando profesionales del área (ingenería agrónoma),
-                                 en conjunto con nuestras otras áreas de especialización buscamos entregar soluciones innovadoras 
-                                 e integrales a las problemáticas del agricultor.
-                            </span>
-                        </div>
-                        <div class="col-2"></div>
-                    </div>
-                    <div class="grid">
-                        <div class="col-2 ocultar-en-movil"></div>
-                        <div class="col- 12 lg:col-8 image-section pt-4">
-                            <div class="image-container h-30rem" (click)="navegarSalas()">
-                              <img src="assets/ingeap/menu-ingeap/61.jpeg"  class="h-30rem" alt="Imagen 1">
-                              <div class="info-overlay text-xl">Salas Eléctricas Chile</div>
-                            </div>
-                            <div class="image-container h-30rem" (click)="navegarIngeap()">
-                              <img src="assets/ingeap/menu-ingeap/59.JPG" class="h-30rem"  alt="Imagen 2">
-                              <div class="info-overlay text-xl">Ingeap Servicios</div>
-                            </div>
-                            <div class="image-container h-30rem" (click)="navegarIngeapAgro()">
-                              <img src="assets/ingeap/menu-ingeap/62.jpg" class="h-30rem"  alt="Imagen 3">
-                              <div class="info-overlay text-xl">Ingeap Agro</div>
-                            </div>
-                        </div>  
-                        <div class="col-2 ocultar-en-movil"></div>
-                    </div>
-                </div>  
-            
-            </div>
-        </div>   
+                    </div>  
+                
+                </div>
+            </div>   
 
-        <div id="negocios" class="px-4 lg:px-8 mx-0 lg:mx-8 text-center">
-            <div class="grid justify-content-center">
-                <div class="col-12 text-center mt-8 mb-4">
-                    <h2 class="text-900 font-normal mb-2">Lineas de Negocios</h2>
-                    <span>La seguridad es nuestro primer valor, todas nuestras actividades deben desarrollarse de manera segura, de tal forma de promover la salud, seguridad y bienestar de nuestro personal</span>
-                </div>
-                <div class="col-12 md:col-4 p-0 lg:pb-5 mt-4 lg:mt-0">
-                    <app-collapsible-panel
-                        title="Proyectos y montajes eléctricos"
-                        imageUrl="assets/ingeap/iconos/7.png"
-                        description="Nuestra división de ingeniería realiza proyectos en BT y MT para ambientes mineros, industriales, oficinas, entre otros. Luego contamos con la infraestructura y el personal capacitado necesario para el montaje y puesta en marcha con altos estándares de calidad y seguridad"
-                        [items]="[
-                            'Proyectos eléctricos de alumbrado, alimentación de fuerza, control, instrumentación y climatización.',
-                            'Diseño y montaje de S/E de media tensión.',
-                            'Diseño y montaje de sistema de distribución de energía en media tensión.',
-                            'Diseño y montaje de sistemas fotovoltaicos.',
-                            'Diseño, confección, montaje de mallas de puesta a tierra (protección, servicio, electrónica).',
-                            'Montajes de grupos electrógenos, VDF, UPS, protecciones, etc.',
-                            'Montajes industriales con tuberías de acero galvanizado y escalerillas porta conductores.',
-                            'Diseño y montaje de sistemas de piping.',
-                            'Montaje y configuración de sistemas de redes y conectividad.',
-                            'Inscripción de instalaciones en SEC.'
-                        ]">
-                    </app-collapsible-panel>
-                </div>
-                <div class="col-12 md:col-4 p-0 lg:pb-5 mt-4 lg:mt-0">
-                    <app-collapsible-panel
-                        title="Asesorías en ingeniería eléctrica"
-                        imageUrl="assets/ingeap/iconos/44.png"
-                        description="Contamos con ingenieros de las áreas eléctrica, electrónica, y mecánica para realizar un desarrollo integral de los proyectos."
-                        [items]="[
-                            'Estudio y medición de mallas de puesta a tierra.',
-                            'Estudios y medición de calidad de energía.',
-                            'Diseño de sistemas de distribución de media y baja tensión.',
-                            'Estudios de coordinación de protecciones.',
-                            'Estudio y memorias de cálculos estructurales con confección de maquetas 3D.',
-                            'Estudio y memorias de cálculos de climatización.',
-                            'Estudio y memorias de cálculos de iluminación.',
-                            'Otros (Consúltanos).'
-                        ]">
-                    </app-collapsible-panel>
-                </div>
-                <div class="col-12 md:col-4 p-0 lg:pb-5 mt-4 lg:mt-0">
-                    <app-collapsible-panel
-                        title="Fabricación de equipos especiales"
-                        imageUrl="assets/ingeap/iconos/30.png"
-                        description="Hemos realizado el diseño y fabricación de algunos equipos especiales para nuestros clientes, los cuales no se encontraron en el mercado y realizamos las integraciones para lograr un equipo con las funciones requeridas."
-                        [items]="[
-                            'Para ABB: equipo para demo en ferias de motores IP 69.',
-                            'Para PVSA: equipos de protección católica para muelle ventanas.',
-                            'Para AES Gener: Equipos para calentar devanados de generadores en mantención.',
-                            'Para Aes Andes: Equipos TTA de 3 fuentes.'
-                        ]">
-                    </app-collapsible-panel>
-                </div>
-                <div class="col-12 md:col-4 p-0 lg:pb-5 mt-4 lg:mt-0">
-                    <app-collapsible-panel
-                        title="Fabricación de Salas eléctrica y/o control"
-                        imageUrl="assets/ingeap/iconos/45.png"
-                        description="Realizamos el diseño, construcción y montaje de salas eléctricas modulares transportables prefabricadas. Esta es una solución que nos permite garantizar los más altos estándares de calidad a un precio más competitivo, integrando equipos de control, protección y/o gestión en una sala centralizada de fácil conexión con el resto de la planta."
-                        [items]="[]">
-                    </app-collapsible-panel>
-                </div>
-                <div class="col-12 md:col-4 p-0 lg:pb-5 mt-4 lg:mt-0">
-                    <app-collapsible-panel
-                        title="Outsourcing y contratos de mantención"
-                        imageUrl="assets/ingeap/iconos/43.png"
-                        description="Hemos realizado el diseño y fabricación de algunos equipos especiales para nuestros clientes, los cuales no se encontraron en el mercado y realizamos las integraciones para lograr un equipo con las funciones requeridas."
-                        [items]="[
-                            'Para ABB: equipo para demo en ferias de motores IP 69.',
-                            'Para PVSA: equipos de protección católica para muelle ventanas.',
-                            'Para AES Gener: Equipos para calentar devanados de generadores en mantención.',
-                            'Para Aes Andes: Equipos TTA de 3 fuentes.'
-                        ]">
-                    </app-collapsible-panel>
-                </div>
-                <div class="col-12 md:col-4 p-0 lg:pb-5 mt-4 lg:mt-0">
-                    <app-collapsible-panel
-                        title="Automatización industrial"
-                        imageUrl="assets/ingeap/iconos/42.png"
-                        description="Nuestra división de automatización industrial puede ayudarle en los proyectos y/o modernizaciones de las máquinas y equipos de su empresa. De tal forma de entregar una solución llave en mano o en la modalidad preferida por el cliente."
-                        [items]="[
-                            'Automatización de sistemas de carguío minero.',
-                            'Automatización de plantas de agua potable y aguas servidas.',
-                            'Automatización, control y monitoreo de plantas frigoríficas.',
-                            'Automatización de plantas de chancado.',
-                            'Automatización, control y monitoreo de sistemas de bombas.',
-                            'Automatización de sistema de control de potencia.'
-                        ]">
-                    </app-collapsible-panel>
+            <div id="negocios" class="px-4 lg:px-8 mx-0 lg:mx-8 text-center">
+                <div class="grid justify-content-center">
+                    <div class="col-12 text-center mt-8 mb-4">
+                        <h2 class="text-900 font-normal mb-2">Lineas de Negocios</h2>
+                        <span>La seguridad es nuestro primer valor, todas nuestras actividades deben desarrollarse de manera segura, de tal forma de promover la salud, seguridad y bienestar de nuestro personal</span>
+                    </div>
+                    <div class="col-12 md:col-4 p-0 lg:pb-5 mt-4 lg:mt-0">
+                        <app-collapsible-panel
+                            title="Proyectos y montajes eléctricos"
+                            imageUrl="assets/ingeap/iconos/7.png"
+                            description="Nuestra división de ingeniería realiza proyectos en BT y MT para ambientes mineros, industriales, oficinas, entre otros. Luego contamos con la infraestructura y el personal capacitado necesario para el montaje y puesta en marcha con altos estándares de calidad y seguridad"
+                            [items]="[
+                                'Proyectos eléctricos de alumbrado, alimentación de fuerza, control, instrumentación y climatización.',
+                                'Diseño y montaje de S/E de media tensión.',
+                                'Diseño y montaje de sistema de distribución de energía en media tensión.',
+                                'Diseño y montaje de sistemas fotovoltaicos.',
+                                'Diseño, confección, montaje de mallas de puesta a tierra (protección, servicio, electrónica).',
+                                'Montajes de grupos electrógenos, VDF, UPS, protecciones, etc.',
+                                'Montajes industriales con tuberías de acero galvanizado y escalerillas porta conductores.',
+                                'Diseño y montaje de sistemas de piping.',
+                                'Montaje y configuración de sistemas de redes y conectividad.',
+                                'Inscripción de instalaciones en SEC.'
+                            ]">
+                        </app-collapsible-panel>
+                    </div>
+                    <div class="col-12 md:col-4 p-0 lg:pb-5 mt-4 lg:mt-0">
+                        <app-collapsible-panel
+                            title="Asesorías en ingeniería eléctrica"
+                            imageUrl="assets/ingeap/iconos/44.png"
+                            description="Contamos con ingenieros de las áreas eléctrica, electrónica, y mecánica para realizar un desarrollo integral de los proyectos."
+                            [items]="[
+                                'Estudio y medición de mallas de puesta a tierra.',
+                                'Estudios y medición de calidad de energía.',
+                                'Diseño de sistemas de distribución de media y baja tensión.',
+                                'Estudios de coordinación de protecciones.',
+                                'Estudio y memorias de cálculos estructurales con confección de maquetas 3D.',
+                                'Estudio y memorias de cálculos de climatización.',
+                                'Estudio y memorias de cálculos de iluminación.',
+                                'Otros (Consúltanos).'
+                            ]">
+                        </app-collapsible-panel>
+                    </div>
+                    <div class="col-12 md:col-4 p-0 lg:pb-5 mt-4 lg:mt-0">
+                        <app-collapsible-panel
+                            title="Fabricación de equipos especiales"
+                            imageUrl="assets/ingeap/iconos/30.png"
+                            description="Hemos realizado el diseño y fabricación de algunos equipos especiales para nuestros clientes, los cuales no se encontraron en el mercado y realizamos las integraciones para lograr un equipo con las funciones requeridas."
+                            [items]="[
+                                'Para ABB: equipo para demo en ferias de motores IP 69.',
+                                'Para PVSA: equipos de protección católica para muelle ventanas.',
+                                'Para AES Gener: Equipos para calentar devanados de generadores en mantención.',
+                                'Para Aes Andes: Equipos TTA de 3 fuentes.'
+                            ]">
+                        </app-collapsible-panel>
+                    </div>
+                    <div class="col-12 md:col-4 p-0 lg:pb-5 mt-4 lg:mt-0">
+                        <app-collapsible-panel
+                            title="Fabricación de Salas eléctrica y/o control"
+                            imageUrl="assets/ingeap/iconos/45.png"
+                            description="Realizamos el diseño, construcción y montaje de salas eléctricas modulares transportables prefabricadas. Esta es una solución que nos permite garantizar los más altos estándares de calidad a un precio más competitivo, integrando equipos de control, protección y/o gestión en una sala centralizada de fácil conexión con el resto de la planta."
+                            [items]="[]">
+                        </app-collapsible-panel>
+                    </div>
+                    <div class="col-12 md:col-4 p-0 lg:pb-5 mt-4 lg:mt-0">
+                        <app-collapsible-panel
+                            title="Outsourcing y contratos de mantención"
+                            imageUrl="assets/ingeap/iconos/43.png"
+                            description="Hemos realizado el diseño y fabricación de algunos equipos especiales para nuestros clientes, los cuales no se encontraron en el mercado y realizamos las integraciones para lograr un equipo con las funciones requeridas."
+                            [items]="[
+                                'Para ABB: equipo para demo en ferias de motores IP 69.',
+                                'Para PVSA: equipos de protección católica para muelle ventanas.',
+                                'Para AES Gener: Equipos para calentar devanados de generadores en mantención.',
+                                'Para Aes Andes: Equipos TTA de 3 fuentes.'
+                            ]">
+                        </app-collapsible-panel>
+                    </div>
+                    <div class="col-12 md:col-4 p-0 lg:pb-5 mt-4 lg:mt-0">
+                        <app-collapsible-panel
+                            title="Automatización industrial"
+                            imageUrl="assets/ingeap/iconos/42.png"
+                            description="Nuestra división de automatización industrial puede ayudarle en los proyectos y/o modernizaciones de las máquinas y equipos de su empresa. De tal forma de entregar una solución llave en mano o en la modalidad preferida por el cliente."
+                            [items]="[
+                                'Automatización de sistemas de carguío minero.',
+                                'Automatización de plantas de agua potable y aguas servidas.',
+                                'Automatización, control y monitoreo de plantas frigoríficas.',
+                                'Automatización de plantas de chancado.',
+                                'Automatización, control y monitoreo de sistemas de bombas.',
+                                'Automatización de sistema de control de potencia.'
+                            ]">
+                        </app-collapsible-panel>
+                    </div>
                 </div>
             </div>
-        </div>
-    
-        <div id="clientes" class="py-4 px-4 lg:px-8 mt-2 mx-0 lg:mx-8 text-center">
-            <div class="grid justify-content-center">
-                <div class="col-12 text-center mt-8 mb-4">
-                    <h2 class="text-900 font-normal mb-2">Nuestros Clientes</h2>
-                    <span>Mas de 25 años de experiencia trabajando con nuestros clientes.</span>
-                </div>
-    
-                <div class="col-12 md:col-12 lg:col-4 p-0 lg:pr-5 lg:pb-5 mt-4 lg:mt-0">
-                    <div style="height:200px; padding:2px; border-radius:10px; background: linear-gradient(90deg, rgba(253, 228, 165, 0.2),rgba(187, 199, 205, 0.2)), linear-gradient(180deg, rgba(253, 228, 165, 0.2),rgba(187, 199, 205, 0.2));">
-                        <div class="p-3 surface-card h-full" style="border-radius:8px;">
-                            <div class="flex align-items-center justify-content-center">
-                                <div class="flex align-items-center justify-content-center" style="width:14rem;height:14rem; border-radius:10px;">
-                                    <img src="assets/ingeap/logo-clientes/logsqm_b.png" alt="Cumplimiento de Ley" style="width: 100%; height: 100%; object-fit: contain; border-radius:10px;">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
         
-                <div class="col-12 md:col-12 lg:col-4 p-0 lg:pr-5 lg:pb-5 mt-4 lg:mt-0">
-                    <div style="height:200px; padding:2px; border-radius:10px; background: linear-gradient(90deg, rgba(145,226,237,0.2),rgba(251, 199, 145, 0.2)), linear-gradient(180deg, rgba(253, 228, 165, 0.2), rgba(172, 180, 223, 0.2));">
-                        <div class="p-3 surface-card h-full" style="border-radius:8px;">
-                            <div class="flex align-items-center justify-content-center">
-                                <div class="flex align-items-center justify-content-center" style="width:14rem;height:14rem; border-radius:10px;">
-                                    <img src="assets/ingeap/logo-clientes/logaes_b.png" alt="Cumplimiento de Ley" style="width: 100%; height: 100%; object-fit: contain; border-radius:10px;">
-                                </div>
-                            </div>
-                        </div>
+            <div id="clientes" class="py-4 px-4 lg:px-8 mt-2 mx-0 lg:mx-8 text-center">
+                <div class="grid justify-content-center">
+                    <div class="col-12 text-center mt-8 mb-4">
+                        <h2 class="text-900 font-normal mb-2">Nuestros Clientes</h2>
+                        <span>Mas de 25 años de experiencia trabajando con nuestros clientes.</span>
                     </div>
-                </div>
         
-                <div class="col-12 md:col-12 lg:col-4 p-0 lg:pb-5 mt-4 lg:mt-0">
-                    <div style="height:200px; padding:2px; border-radius:10px; background: linear-gradient(90deg, rgba(145, 226, 237, 0.2), rgba(172, 180, 223, 0.2)), linear-gradient(180deg, rgba(172, 180, 223, 0.2), rgba(246, 158, 188, 0.2));">
-                        <div class="p-3 surface-card h-full" style="border-radius:8px;">
-                            <div class="flex align-items-center justify-content-center">
-                                <div class="flex align-items-center justify-content-center" style="width:14rem;height:14rem; border-radius:10px;">
-                                    <img src="assets/ingeap/logo-clientes/logcolbun_b.png" alt="Cumplimiento de Ley" style="width: 100%; height: 100%; object-fit: contain; border-radius:10px;">
+                    <div class="col-12 md:col-12 lg:col-4 p-0 lg:pr-5 lg:pb-5 mt-4 lg:mt-0">
+                        <div style="height:200px; padding:2px; border-radius:10px; background: linear-gradient(90deg, rgba(253, 228, 165, 0.2),rgba(187, 199, 205, 0.2)), linear-gradient(180deg, rgba(253, 228, 165, 0.2),rgba(187, 199, 205, 0.2));">
+                            <div class="p-3 surface-card h-full" style="border-radius:8px;">
+                                <div class="flex align-items-center justify-content-center">
+                                    <div class="flex align-items-center justify-content-center" style="width:14rem;height:14rem; border-radius:10px;">
+                                        <img src="assets/ingeap/logo-clientes/logsqm_b.png" alt="Cumplimiento de Ley" style="width: 100%; height: 100%; object-fit: contain; border-radius:10px;">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+            
+                    <div class="col-12 md:col-12 lg:col-4 p-0 lg:pr-5 lg:pb-5 mt-4 lg:mt-0">
+                        <div style="height:200px; padding:2px; border-radius:10px; background: linear-gradient(90deg, rgba(145,226,237,0.2),rgba(251, 199, 145, 0.2)), linear-gradient(180deg, rgba(253, 228, 165, 0.2), rgba(172, 180, 223, 0.2));">
+                            <div class="p-3 surface-card h-full" style="border-radius:8px;">
+                                <div class="flex align-items-center justify-content-center">
+                                    <div class="flex align-items-center justify-content-center" style="width:14rem;height:14rem; border-radius:10px;">
+                                        <img src="assets/ingeap/logo-clientes/logaes_b.png" alt="Cumplimiento de Ley" style="width: 100%; height: 100%; object-fit: contain; border-radius:10px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="col-12 md:col-12 lg:col-4 p-0 lg:pb-5 mt-4 lg:mt-0">
+                        <div style="height:200px; padding:2px; border-radius:10px; background: linear-gradient(90deg, rgba(145, 226, 237, 0.2), rgba(172, 180, 223, 0.2)), linear-gradient(180deg, rgba(172, 180, 223, 0.2), rgba(246, 158, 188, 0.2));">
+                            <div class="p-3 surface-card h-full" style="border-radius:8px;">
+                                <div class="flex align-items-center justify-content-center">
+                                    <div class="flex align-items-center justify-content-center" style="width:14rem;height:14rem; border-radius:10px;">
+                                        <img src="assets/ingeap/logo-clientes/logcolbun_b.png" alt="Cumplimiento de Ley" style="width: 100%; height: 100%; object-fit: contain; border-radius:10px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="col-12 md:col-12 lg:col-4 p-0 lg:pr-5 lg:pb-5 mt-4 lg:mt-0">
+                        <div style="height:200px; padding:2px; border-radius:10px; background: linear-gradient(90deg, rgba(187, 199, 205, 0.2),rgba(251, 199, 145, 0.2)), linear-gradient(180deg, rgba(253, 228, 165, 0.2),rgba(145, 210, 204, 0.2));">
+                            <div class="p-3 surface-card h-full" style="border-radius:8px;">
+                                <div class="flex align-items-center justify-content-center">
+                                    <div class="flex align-items-center justify-content-center" style="width:14rem;height:14rem; border-radius:10px;">
+                                        <img src="assets/ingeap/logo-clientes/logcemin_b.png" alt="Cumplimiento de Ley" style="width: 100%; height: 100%; object-fit: contain; border-radius:10px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="col-12 md:col-12 lg:col-4 p-0 lg:pr-5 lg:pb-5 mt-4 lg:mt-0">
+                        <div style="height:200px; padding:2px; border-radius:10px; background: linear-gradient(90deg, rgba(187, 199, 205, 0.2),rgba(246, 158, 188, 0.2)), linear-gradient(180deg, rgba(145, 226, 237, 0.2),rgba(160, 210, 250, 0.2));">
+                            <div class="p-3 surface-card h-full" style="border-radius:8px;">
+                                <div class="flex align-items-center justify-content-center">
+                                    <div class="flex align-items-center justify-content-center" style="width:14rem;height:14rem; border-radius:10px;">
+                                        <img src="assets/ingeap/logo-clientes/logoflorida_b.png" alt="Cumplimiento de Ley" style="width: 100%; height: 100%; object-fit: contain; border-radius:10px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="col-12 md:col-12 lg:col-4 p-0 lg:pb-5 mt-4 lg:mt-0">
+                        <div style="height:200px; padding:2px; border-radius:10px; background: linear-gradient(90deg, rgba(251, 199, 145, 0.2), rgba(246, 158, 188, 0.2)), linear-gradient(180deg, rgba(172, 180, 223, 0.2), rgba(212, 162, 221, 0.2));">
+                            <div class="p-3 surface-card h-full" style="border-radius:8px;">
+                                <div class="flex align-items-center justify-content-center">
+                                    <div class="flex align-items-center justify-content-center" style="width:14rem;height:14rem; border-radius:10px;">
+                                        <img src="assets/ingeap/logo-clientes/logmelon_b.png" alt="Cumplimiento de Ley" style="width: 100%; height: 100%; object-fit: contain; border-radius:10px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                
                 </div>
-        
-                <div class="col-12 md:col-12 lg:col-4 p-0 lg:pr-5 lg:pb-5 mt-4 lg:mt-0">
-                    <div style="height:200px; padding:2px; border-radius:10px; background: linear-gradient(90deg, rgba(187, 199, 205, 0.2),rgba(251, 199, 145, 0.2)), linear-gradient(180deg, rgba(253, 228, 165, 0.2),rgba(145, 210, 204, 0.2));">
-                        <div class="p-3 surface-card h-full" style="border-radius:8px;">
-                            <div class="flex align-items-center justify-content-center">
-                                <div class="flex align-items-center justify-content-center" style="width:14rem;height:14rem; border-radius:10px;">
-                                    <img src="assets/ingeap/logo-clientes/logcemin_b.png" alt="Cumplimiento de Ley" style="width: 100%; height: 100%; object-fit: contain; border-radius:10px;">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="col-12 md:col-12 lg:col-4 p-0 lg:pr-5 lg:pb-5 mt-4 lg:mt-0">
-                    <div style="height:200px; padding:2px; border-radius:10px; background: linear-gradient(90deg, rgba(187, 199, 205, 0.2),rgba(246, 158, 188, 0.2)), linear-gradient(180deg, rgba(145, 226, 237, 0.2),rgba(160, 210, 250, 0.2));">
-                        <div class="p-3 surface-card h-full" style="border-radius:8px;">
-                            <div class="flex align-items-center justify-content-center">
-                                <div class="flex align-items-center justify-content-center" style="width:14rem;height:14rem; border-radius:10px;">
-                                    <img src="assets/ingeap/logo-clientes/logoflorida_b.png" alt="Cumplimiento de Ley" style="width: 100%; height: 100%; object-fit: contain; border-radius:10px;">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="col-12 md:col-12 lg:col-4 p-0 lg:pb-5 mt-4 lg:mt-0">
-                    <div style="height:200px; padding:2px; border-radius:10px; background: linear-gradient(90deg, rgba(251, 199, 145, 0.2), rgba(246, 158, 188, 0.2)), linear-gradient(180deg, rgba(172, 180, 223, 0.2), rgba(212, 162, 221, 0.2));">
-                        <div class="p-3 surface-card h-full" style="border-radius:8px;">
-                            <div class="flex align-items-center justify-content-center">
-                                <div class="flex align-items-center justify-content-center" style="width:14rem;height:14rem; border-radius:10px;">
-                                    <img src="assets/ingeap/logo-clientes/logmelon_b.png" alt="Cumplimiento de Ley" style="width: 100%; height: 100%; object-fit: contain; border-radius:10px;">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>                
             </div>
         </div>
     </div>
+    <div class="mt-auto">
+        <app-footer></app-footer>
+    </div>
 </div>
-<app-footer></app-footer>
