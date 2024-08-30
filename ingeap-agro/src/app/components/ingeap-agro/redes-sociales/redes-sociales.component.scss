@@ -1,0 +1,25 @@
+.redes-sociales {
+    text-align: center;
+  }
+  
+  .iconos {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .icono {
+    cursor: pointer;
+    color: green;
+  }
+  
+  .informacion {
+    margin-top: 20px;
+  }
+  
+  .informacion img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+  }
+  

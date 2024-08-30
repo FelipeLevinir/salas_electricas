@@ -243,51 +243,9 @@
 
             <div id="beneficios" class="px-4 bg-gray-100 text-center">
                 <div class="grid justify-content-center">
-                    <div class="col-12 text-center mb-4">
-                        <h2 class="text-5xl font-normal mb-2">Redes Sociales</h2>
-                    </div>
 
-                    <div class="p-d-flex p-jc-center p-ai-center p-mt-4">
-                        <div class="p-grid">
-                        <!-- Facebook Posts -->
-                        <div class="p-col-12 p-md-4">
-                            <div class="social-card p-p-3 p-mb-4">
-                            <h2 class="p-text-center">Facebook</h2>
-                            <div *ngFor="let post of facebookPosts" class="p-mb-2">
-                                <p>{{ post.message }}</p>
-                                <a [href]="post.full_picture" target="_blank">
-                                <img [src]="post.full_picture" alt="Facebook Post" class="social-img"/>
-                                </a>
-                            </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Instagram Posts -->
-                        <div class="p-col-12 p-md-4">
-                            <div class="social-card p-p-3 p-mb-4">
-                            <h2 class="p-text-center">Instagram</h2>
-                            <div *ngFor="let post of instagramPosts" class="p-mb-2">
-                                <p>{{ post.caption }}</p>
-                                <a [href]="post.permalink" target="_blank">
-                                <img [src]="post.media_url" alt="Instagram Post" class="social-img"/>
-                                </a>
-                            </div>
-                            </div>
-                        </div>
-                        
-                        <!-- LinkedIn Posts -->
-                        <div class="p-col-12 p-md-4">
-                            <div class="social-card p-p-3 p-mb-4">
-                            <h2 class="p-text-center">LinkedIn</h2>
-                            <div *ngFor="let post of linkedinPosts" class="p-mb-2">
-                                <p>{{ post.text }}</p>
-                                <a [href]="post.permalink" target="_blank">
-                                <img [src]="post.thumbnailUrl" alt="LinkedIn Post" class="social-img"/>
-                                </a>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
+                    <div class="">
+                        <app-redes-sociales></app-redes-sociales>
                     </div>
                     
                 

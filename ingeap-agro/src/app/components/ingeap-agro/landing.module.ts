@@ -17,6 +17,7 @@ import { MenuServicio1Component } from './menu-servicio-1/menu-servicio-1.compon
 import { MenuServicio2Component } from './menu-servicio-2/menu-servicio-2.component';
 import { MenuServicio3Component } from './menu-servicio-3/menu-servicio-3.component';
 import { MenuServicio4Component } from './menu-servicio-4/menu-servicio-4.component';
+import { RedesSocialesComponent } from './redes-sociales/redes-sociales.component';
 
 @NgModule({
     imports: [
@@ -36,7 +37,8 @@ import { MenuServicio4Component } from './menu-servicio-4/menu-servicio-4.compon
         MenuServicio1Component,
         MenuServicio2Component,
         MenuServicio3Component,
-        MenuServicio4Component
+        MenuServicio4Component,
+        RedesSocialesComponent
     ],
     declarations: [LandingIngeapAgroComponent]
 })

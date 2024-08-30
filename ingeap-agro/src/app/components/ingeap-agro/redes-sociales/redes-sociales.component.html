@@ -1,0 +1,40 @@
+<div class="redes-sociales">
+    <div class="col-12 text-center mb-4">
+        <h2 class="text-5xl font-normal mb-2">Redes Sociales</h2>
+    </div>
+    <div class="iconos">
+      <div class="icono m-3" (click)="mostrarInformacion('instagram')">
+        <i class="text-3xl pi pi-instagram"></i>
+        <span class="ml-2 text-3xl">Instagram</span>
+
+      </div>
+      <div class="icono m-3" (click)="mostrarInformacion('facebook')">
+        <i class="text-3xl pi pi-facebook"></i>
+        <span class="ml-2 text-3xl">Facebook</span>
+
+      </div>
+      <div class="icono m-3" (click)="mostrarInformacion('linkedin')">
+        <i class="text-3xl pi pi-linkedin"></i>
+        <span class="ml-2 text-3xl">Linkedin</span>
+
+      </div>
+    </div>
+    <div class="informacion" *ngIf="informacionVisible">
+      <ng-container *ngIf="informacion === 'instagram'">
+
+        <!-- <p class="mb-5">Contenido de Instagram...</p> -->
+        <p-progressSpinner ariaLabel="loading" />
+      </ng-container>
+      <ng-container *ngIf="informacion === 'facebook'">
+
+        <!-- <p class="mb-5">Contenido de Facebook...</p> -->
+        <p-progressSpinner ariaLabel="loading" />
+      </ng-container>
+      <ng-container *ngIf="informacion === 'linkedin'">
+
+        <!-- <p class="mb-5">Contenido de Linkdin...</p> -->
+        <p-progressSpinner ariaLabel="loading" />
+      </ng-container>
+    </div>
+  </div>
+  
