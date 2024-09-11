@@ -9,7 +9,7 @@ import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 import { FormsModule } from '@angular/forms';
-import Swal from 'sweetalert2'; // Importar SweetAlert
+import Swal from 'sweetalert2'; 
 
 @Component({
   selector: 'app-contacto-ingeap-agro',
@@ -41,21 +41,36 @@ export class ContactoIngeapAgroComponent {
     message: ''
   };
 
-  isSending: boolean = false; // Estado para deshabilitar el botón mientras se envía
+  isSending: boolean = false; 
 
-  // Navegar a un fragmento
   navigateToFragment(fragment: string) {
     this.router.navigate(['/agro'], { fragment });
   }
 
-  // Navegar dentro de la app
   navegarIngeapAgro() {
     this.router.navigate(['/agro']);
   }
 
-  // Función para enviar el email de manera asíncrona
+  private validarFormulario(): boolean {
+    if (!this.formData.name || !this.formData.email || !this.formData.message) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Formulario incompleto',
+        text: 'Por favor, completa todos los campos antes de enviar.',
+        confirmButtonText: 'Aceptar'
+      });
+      return false;
+    }
+    return true;
+  }
+
+
   public async EnviarMail() {
-    this.isSending = true; // Deshabilitar botón mientras se envía el correo
+    if (!this.validarFormulario()) {
+      return;
+    }
+
+    this.isSending = true; 
 
     try {
       const result: EmailJSResponseStatus = await emailjs.send('service_gpae8gg', 'template_dd941bi', {
@@ -65,7 +80,6 @@ export class ContactoIngeapAgroComponent {
         reply_to: this.formData.email
       }, 'RXcaETsyIjXUyOMNC');
       
-      // Mostrar SweetAlert de éxito
       Swal.fire({
         icon: 'success',
         title: '¡Correo enviado!',
@@ -77,7 +91,7 @@ export class ContactoIngeapAgroComponent {
     } catch (error) {
       console.error(error.text);
       
-      // Mostrar SweetAlert de error
+
       Swal.fire({
         icon: 'error',
         title: 'Error',
@@ -85,11 +99,10 @@ export class ContactoIngeapAgroComponent {
         confirmButtonText: 'Aceptar'
       });
     } finally {
-      this.isSending = false; // Rehabilitar el botón después de enviar
+      this.isSending = false;
     }
   }
 
-  // Limpiar los campos del formulario
   public limpiarFormulario() {
     this.formData = {
       name: '',

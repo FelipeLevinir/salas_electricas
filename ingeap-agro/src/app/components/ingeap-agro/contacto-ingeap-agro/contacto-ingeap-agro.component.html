@@ -11,33 +11,28 @@
                     <div class="col-6">
                         <form class="p-fluid" (ngSubmit)="EnviarMail()">
                             <div class="p-field">
-                              <label for="name">Nombre</label>
-                              <input type="text" name="name" pInputText [(ngModel)]="formData.name" />
+                                <label for="name">Nombre</label>
+                                <input type="text" name="name" pInputText [(ngModel)]="formData.name" />
                             </div>
                             <div class="p-field">
-                              <label for="email">Email</label>
-                              <input type="email" name="email" pInputText [(ngModel)]="formData.email" />
+                                <label for="email">Email</label>
+                                <input type="email" name="email" pInputText [(ngModel)]="formData.email" />
                             </div>
                             <div class="p-field">
-                              <label for="comentario">Comentario</label>
-                              <textarea name="message" id="comentario" rows="6" pInputTextarea [(ngModel)]="formData.message"></textarea>
+                                <label for="comentario">Comentario</label>
+                                <textarea name="message" id="comentario" rows="6" pInputTextarea [(ngModel)]="formData.message"></textarea>
                             </div>
                             <div class="p-field p-d-flex p-ai-center">
-                              <div class="grid">
-                                <div class="col-6">
-                                  <!-- Deshabilitar el botón cuando se está enviando -->
-                                  <button type="submit" pButton label="ENVIAR" class="p-mr-2 bg-orange-500" [disabled]="isSending" style="border: 2px solid orange;">
-                                    <!-- Cambiar el texto del botón mientras se envía -->
-                                    <span *ngIf="!isSending">ENVIAR</span>
-                                    <span *ngIf="isSending">ENVIANDO...</span>
-                                  </button>
+                                <div class="grid">
+                                    <div class="col-6">
+                                        <button type="submit" pButton [label]="isSending ? 'ENVIANDO...' : 'ENVIAR'"  [disabled]="isSending" class="p-mr-2 bg-orange-500" style="border: 2px solid orange;"></button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button type="button" pButton label="BORRAR" class="p-button-secondary" (click)="limpiarFormulario()"></button>
+                                    </div>
                                 </div>
-                                <div class="col-6">
-                                  <button type="button" pButton label="BORRAR" class="p-button-secondary" (click)="limpiarFormulario()"></button>
-                                </div>
-                              </div>
                             </div>
-                        </form>                                                
+                        </form>                        
                     </div>
 
                     <div class="col-6 my-auto align-items-center text-center">
