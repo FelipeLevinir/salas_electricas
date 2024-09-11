@@ -18,9 +18,11 @@ import { MenuServicio2Component } from './menu-servicio-2/menu-servicio-2.compon
 import { MenuServicio3Component } from './menu-servicio-3/menu-servicio-3.component';
 import { MenuServicio4Component } from './menu-servicio-4/menu-servicio-4.component';
 import { RedesSocialesComponent } from './redes-sociales/redes-sociales.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     imports: [
+        HttpClientModule,
         CommonModule,
         LandingRoutingModule,
         DividerModule,
