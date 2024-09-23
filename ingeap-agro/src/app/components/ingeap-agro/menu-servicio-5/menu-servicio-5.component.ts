@@ -47,8 +47,10 @@ export class MenuServicio5Component {
     ];
 
     imagesSuelo: any[] = [
-      {source: 'assets/ingeap-agro/aranet/9.webp', alt: 'Imagen 1'},
-      {source: 'assets/ingeap-agro/aranet/9.1.png', alt: 'Imagen 2'}
+      // {source: 'assets/ingeap-agro/aranet/9.webp', alt: 'Imagen 1'},
+      {source: 'assets/ingeap-agro/aranet/9.1.png', alt: 'Imagen 1'},
+      {source: 'assets/ingeap-agro/aranet/suelo1.webp', alt: 'Imagen 2'},
+      {source: 'assets/ingeap-agro/aranet/suelo2.jpg', alt: 'Imagen 3'}
     ];
 
     imagesCO2: any[] = [
@@ -65,7 +67,10 @@ export class MenuServicio5Component {
 
     imagesDGA: any[] = [
         {source: 'assets/ingeap-agro/aranet/12.png', alt: 'Imagen 1'},
-        {source: 'assets/ingeap-agro/aranet/1.png', alt: 'Imagen 2'}
+        {source: 'assets/ingeap-agro/aranet/diametro1.png', alt: 'Imagen 2'},
+        {source: 'assets/ingeap-agro/aranet/diametro2.webp', alt: 'Imagen 3'},
+        {source: 'assets/ingeap-agro/aranet/diametro3.webp', alt: 'Imagen 4'},
+        // {source: 'assets/ingeap-agro/aranet/1.png', alt: 'Imagen 2'}
     ];
 
     imagesPAR: any[] = [
@@ -73,7 +78,7 @@ export class MenuServicio5Component {
       {source: 'assets/ingeap-agro/aranet/7.1.png', alt: 'Imagen 2'}
     ];
 
-    imagesDGA2: any[] = [
+    imagesSensorDiametro: any[] = [
       {source: 'assets/ingeap-agro/aranet/10.webp', alt: 'Imagen 1'},
       {source: 'assets/ingeap-agro/aranet/10.1.webp', alt: 'Imagen 2'}
     ];

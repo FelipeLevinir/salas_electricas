@@ -29,43 +29,40 @@
                     </ng-template>
                 </p-carousel>
                 <div class="grid overlay-block">
-                    <div  id="elemento_chico" class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl border-md-right">
-                        <div class="flex align-items-center justify-content-center" 
-                            style="width:6rem;height:6rem; border-radius:10px;">
+                    <div id="elemento_chico" class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl border-md-right">
+                        <div class="icon-container">
                             <img [src]="imagenSrc1"
                                 (mouseover)="cambiarImagen1(true)"
                                 (mouseout)="cambiarImagen1(false)"
                                 (click)="navegarSalas()"
-                                alt="Salas Eléctricas Chile" 
-                                style="width: 100%; height: 100%; object-fit: contain; border-radius:10px; cursor: pointer;" class="img-responsive">
+                                alt="Salas Eléctricas Chile"
+                                class="img-responsive icon-img">
                         </div>
                         <span>Salas Eléctricas Chile</span>
                     </div>
-                    <div  id="elemento_chico" class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl border-md-right">
-                        <div class="flex align-items-center justify-content-center" 
-                            style="width:6rem;height:6rem; border-radius:10px;">
+                    <div id="elemento_chico" class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl border-md-right">
+                        <div class="icon-container">
                             <img [src]="imagenSrc2"
                                 (mouseover)="cambiarImagen2(true)"
                                 (mouseout)="cambiarImagen2(false)"
                                 (click)="navegarIngeap()"
-                                alt="Ingeap Servicios" 
-                                style="width: 100%; height: 100%; object-fit: contain; border-radius:10px; cursor: pointer;" class="img-responsive">
+                                alt="Ingeap Servicios"
+                                class="img-responsive icon-img">
                         </div>
                         <span>Ingeap Servicios</span>
                     </div>   
-                    <div  id="elemento_chico" class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl border-md-right">
-                        <div class="flex align-items-center justify-content-center" 
-                            style="width:6rem;height:6rem; border-radius:10px;">
+                    <div id="elemento_chico" class="col-12 md:col-4 lg:col-4 flex flex-column align-items-center justify-content-center text-xl">
+                        <div class="icon-container">
                             <img [src]="imagenSrc3"
                                 (mouseover)="cambiarImagen3(true)"
                                 (mouseout)="cambiarImagen3(false)"
                                 (click)="navegarIngeapAgro()"
-                                alt="Ingeap Agro" 
-                                style="width: 100%; height: 100%; object-fit: contain; border-radius:10px; cursor: pointer;" class="img-responsive">
+                                alt="Ingeap Agro"
+                                class="img-responsive icon-img">
                         </div>
                         <span>Ingeap Agro</span>
-                    </div>               
-                </div>
+                    </div>
+                </div>                
             </div>
                 
             <div id="acerca" class="py-6 px-4 bg-gray-100">

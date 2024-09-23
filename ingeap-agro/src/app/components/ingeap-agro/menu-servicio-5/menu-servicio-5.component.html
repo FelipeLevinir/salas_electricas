@@ -129,7 +129,7 @@
             <div class="col-12 md:col-6 lg:col-5 p-4 flex justify-content-end flex-wrap">
                 <div class="card">
                     <h4 class="text-center">Sensor de “Suelo”</h4>
-                    <p-carousel [value]="imagesSensorTHR" [numVisible]="1" [numScroll]="1" [circular]="true" autoplayInterval="5000">
+                    <p-carousel [value]="imagesSuelo" [numVisible]="1" [numScroll]="1" [circular]="true" autoplayInterval="5000">
                         <ng-template pTemplate="item" let-image>
                             <img [src]="image.source" [alt]="image.alt" class="w-20rem h-20rem">
                         </ng-template>
@@ -210,8 +210,8 @@
             </div>
             <div class="col-12 md:col-6 lg:col-5 p-4">
                 <div class="card">
-                    <h4 class="text-center">Transmisor DGA #1238</h4>
-                    <p-carousel [value]="imagesDGA2" [numVisible]="1" [numScroll]="1" [circular]="true" autoplayInterval="5000">
+                    <h4 class="text-center">Sensor de diámetro</h4>
+                    <p-carousel [value]="imagesSensorDiametro" [numVisible]="1" [numScroll]="1" [circular]="true" autoplayInterval="5000">
                         <ng-template pTemplate="item" let-image>
                             <img [src]="image.source" [alt]="image.alt" class="w-20rem h-20rem">
                         </ng-template>
