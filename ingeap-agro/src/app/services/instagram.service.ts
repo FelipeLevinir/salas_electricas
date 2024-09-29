@@ -18,7 +18,7 @@ export class InstagramService {
   getRecentPosts(): Observable<any> {
     const url = `${this.baseUrl}?fields=id,media_type,media_url,permalink,thumbnail_url,caption&access_token=${this.accessToken}`;
     return this.http.get(url).pipe(
-      map((response: any) => response.data.slice(0, 6)) // Tomar solo los últimos 3 posts
+      map((response: any) => response.data.slice(0, 12)) 
     );
   }
 }

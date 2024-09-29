@@ -10,19 +10,22 @@ import { InstagramService } from 'src/app/services/instagram.service';
   styleUrl: './redes-sociales.component.scss'
 })
 export class RedesSocialesComponent {
-  
-  informacionVisible = true;
-  informacion: string = 'instagram';
+
 
   Instagramposts: any[] = [];
 
   constructor(private instagramService: InstagramService) {}
 
-  mostrarInformacion(tipo: string) {
-    this.informacion = tipo;
-    this.informacionVisible = true;
+  getSizeClass(index: number): string {
+    // Definir qué índices tendrán tamaño grande
+    const largeIndices = [0, 3, 6, 9]; // Cambia esto según tus necesidades
+    if (largeIndices.includes(index)) {
+      return 'size-large';
+    }
+    // Puedes definir tamaños medios si lo deseas
+    return 'size-small'; // Por defecto o para otros índices
   }
-
+  
   ngOnInit(): void {
     this.instagramService.getRecentPosts().subscribe(
       (data) => {

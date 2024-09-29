@@ -2,48 +2,26 @@
     <div class="col-12 text-center mb-4">
         <h2 class="text-5xl font-normal mb-2">Redes Sociales</h2>
     </div>
-    <div class="iconos">
-      <div class="icono m-3" (click)="mostrarInformacion('instagram')">
-        <i class="text-3xl pi pi-instagram"></i>
-        <span class="ml-2 text-3xl">Instagram</span>
 
-      </div>
-      <div class="icono m-3" (click)="mostrarInformacion('facebook')">
-        <i class="text-3xl pi pi-facebook"></i>
-        <span class="ml-2 text-3xl">Facebook</span>
-
-      </div>
-      <div class="icono m-3" (click)="mostrarInformacion('linkedin')">
-        <i class="text-3xl pi pi-linkedin"></i>
-        <span class="ml-2 text-3xl">Linkedin</span>
-
-      </div>
+    <div class="follow-button mb-4">
+      <a href="https://www.instagram.com/ingeap.agro/" target="_blank" class="btn-follow">
+        Seguir en Instagram
+      </a>
     </div>
-    <div class="informacion" *ngIf="informacionVisible">
-      <ng-container *ngIf="informacion === 'instagram'">
 
-        <div *ngIf="Instagramposts" class="instagram-container">
-          <div *ngFor="let post of Instagramposts; let i = index" [ngClass]="{'large': i % 4 === 0}" class="post">
-            <a [href]="post.permalink" target="_blank">
-              <img *ngIf="post.media_type === 'IMAGE' || post.media_type === 'CAROUSEL_ALBUM'" [src]="post.media_url" alt="Instagram Post" />
-              <img *ngIf="post.media_type === 'VIDEO'" [src]="post.thumbnail_url" alt="Instagram Video" />
-            </a>
-          </div>
-        </div>               
-      
-        <p-progressSpinner ariaLabel="loading" *ngIf="!Instagramposts"/>
+    <p-progressSpinner ariaLabel="loading" *ngIf="!Instagramposts"/>
 
-      </ng-container>
-      <ng-container *ngIf="informacion === 'facebook'">
-
-        <!-- <p class="mb-5">Contenido de Facebook...</p> -->
-        <p-progressSpinner ariaLabel="loading" />   
-      </ng-container>
-      <ng-container *ngIf="informacion === 'linkedin'">
-
-        <!-- <p class="mb-5">Contenido de Linkdin...</p> -->
-        <p-progressSpinner ariaLabel="loading" />
-      </ng-container>
-    </div>
-  </div>
+    <div *ngIf="Instagramposts" class="instagram-container mb-4">
+      <div *ngFor="let post of Instagramposts; let i = index" 
+           class="post" [ngClass]="getSizeClass(i)">
+        <a [href]="post.permalink" target="_blank">
+          <img *ngIf="post.media_type === 'IMAGE' || post.media_type === 'CAROUSEL_ALBUM'" 
+               [src]="post.media_url" alt="Instagram Post" />
+          <img *ngIf="post.media_type === 'VIDEO'" 
+               [src]="post.thumbnail_url" alt="Instagram Video" />
+        </a>
+      </div>
+    </div>                     
+  
+</div>
   
