@@ -1,7 +1,6 @@
 import { Component, OnInit, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { LayoutService } from 'src/app/layout/service/app.layout.service';
-import { SocialMediaServiceService } from './services/social-media-service.service';
 @Component({
     selector: 'app-landing',
     templateUrl: './landing.component.html',
@@ -86,12 +85,10 @@ export class LandingIngeapAgroComponent implements OnInit {
     instagramPosts: any[] = [];
     linkedinPosts: any[] = [];
 
-    constructor(public layoutService: LayoutService, public router: Router, public socialMediaService: SocialMediaServiceService) { }
+    constructor(public layoutService: LayoutService, public router: Router) { }
 
     ngOnInit() {
-        this.loadFacebookPosts();
-        this.loadInstagramPosts();
-        this.loadLinkedInPosts();
+
     }
 
     navigateToFragment(fragment: string) {
@@ -110,21 +107,5 @@ export class LandingIngeapAgroComponent implements OnInit {
         this.router.navigate(['/pagina-en-construccion']);
     }
 
-    loadFacebookPosts(): void {
-        this.socialMediaService.getFacebookPosts().subscribe(data => {
-          this.facebookPosts = data['data']; // Ajusta según la estructura de la respuesta
-        });
-      }
     
-      loadInstagramPosts(): void {
-        this.socialMediaService.getInstagramPosts().subscribe(data => {
-          this.instagramPosts = data['data']; // Ajusta según la estructura de la respuesta
-        });
-      }
-    
-      loadLinkedInPosts(): void {
-        this.socialMediaService.getLinkedInPosts().subscribe(data => {
-          this.linkedinPosts = data['elements']; // Ajusta según la estructura de la respuesta
-        });
-      }
 }

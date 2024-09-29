@@ -2,24 +2,69 @@
     text-align: center;
   }
   
-  .iconos {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-  }
+.iconos {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
   
-  .icono {
-    cursor: pointer;
-    color: green;
-  }
+.icono {
+  cursor: pointer;
+  color: green;
+}
   
-  .informacion {
-    margin-top: 20px;
-  }
+.informacion {
+  margin-top: 20px;
+}
   
-  .informacion img {
-    width: 100px;
-    height: 100px;
-    margin-right: 10px;
-  }
+.informacion img {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+  
+///////////////////////////////////
+/// 
+///   Instagram
+/// 
+.instagram-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Distribuye automáticamente las columnas */
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+  
+.instagram-container .post {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out; /* Transición para el zoom */
+}
+  
+.instagram-container .post img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen mantenga proporciones */
+  transition: transform 0.3s ease-in-out;
+}
+  
+.instagram-container .post.large {
+  grid-column: span 2; /* Hace que ocupe el espacio de 2 columnas */
+  grid-row: span 2; /* Hace que ocupe el espacio de 2 filas */
+}
+  
+  /* Efecto zoom al pasar el mouse */
+.instagram-container .post:hover img {
+  transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el mouse */
+}
+  
+.instagram-container .post.large:hover img {
+  transform: scale(1.2); /* Un poco más de zoom para las imágenes grandes */
+}
+///////////////////////////////////
+/// 
+///   EndInstagram
+/// 
   
