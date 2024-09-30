@@ -67,7 +67,6 @@ export class MenuServicio5Component {
 
     imagesDGA: any[] = [
         {source: 'assets/ingeap-agro/aranet/12.png', alt: 'Imagen 1'},
-        {source: 'assets/ingeap-agro/aranet/diametro1.png', alt: 'Imagen 2'},
         {source: 'assets/ingeap-agro/aranet/diametro2.webp', alt: 'Imagen 3'},
         {source: 'assets/ingeap-agro/aranet/diametro3.webp', alt: 'Imagen 4'},
         // {source: 'assets/ingeap-agro/aranet/1.png', alt: 'Imagen 2'}
