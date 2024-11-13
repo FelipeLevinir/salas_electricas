@@ -34,4 +34,4 @@ import { HeaderComponent } from './header/header.component';
     ],
     declarations: [SalasElectricasComponent, CollapsiblePanelComponent]
 })
-export class IngeapLandingModule { }
+export class SalasElectricasLandingModule { }

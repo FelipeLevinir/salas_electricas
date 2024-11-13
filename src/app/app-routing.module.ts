@@ -7,7 +7,7 @@ import { EstamosTrabajandoComponent } from './components/estamos-trabajando/esta
     imports: [
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' }, // Redirección por defecto
-            { path: 'home', loadChildren: () => import('./components/salas_electricas/salas_electricas.module').then(m => m.IngeapLandingModule) },
+            { path: 'home', loadChildren: () => import('./components/salas_electricas/salas_electricas.module').then(m => m.SalasElectricasLandingModule) },
             { path: 'notfound', component: NotfoundComponent },
             { path: 'pagina-en-construccion', component: EstamosTrabajandoComponent},
             { path: '**', redirectTo: '/notfound' },
